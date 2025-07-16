@@ -542,15 +542,6 @@
         // Main App Component
         const App = () => {
             useEffect(() => {
-                // GDPR/CCPA Cookie Consent Simulation
-                const hasConsent = localStorage.getItem('cookieConsent');
-                if (!hasConsent) {
-                    setTimeout(() => {
-                        const consent = confirm('This website uses cookies to improve your experience. Do you accept our cookie policy?');
-                        localStorage.setItem('cookieConsent', consent ? 'accepted' : 'declined');
-                    }, 2000);
-                }
-                
                 // WordPress API integration placeholder
                 // fetch('/wp-json/wp/v2/posts').then(response => response.json()).then(posts => console.log(posts));
             }, []);

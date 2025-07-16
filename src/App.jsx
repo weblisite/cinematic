@@ -53,17 +53,6 @@ import ImportExportTrading from './pages/industries/ImportExportTrading'
 import BeautyCosmetics from './pages/industries/BeautyCosmetics'
 
 function App() {
-  useEffect(() => {
-    // GDPR/CCPA Cookie Consent Simulation
-    const hasConsent = localStorage.getItem('cookieConsent')
-    if (!hasConsent) {
-      setTimeout(() => {
-        const consent = confirm('This website uses cookies to improve your experience. Do you accept our cookie policy?')
-        localStorage.setItem('cookieConsent', consent ? 'accepted' : 'declined')
-      }, 2000)
-    }
-  }, [])
-
   return (
     <Router>
       <ScrollToTop />
