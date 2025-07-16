@@ -231,7 +231,7 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-cinematic-gold mr-3" />
                 <h3 className="text-xl font-bold text-cinematic-gold">Email</h3>
               </div>
-              <p className="text-gray-300">contact@cinematic.co.ke</p>
+                              <p className="text-gray-300">antony@cinematic.co.ke</p>
               <p className="text-gray-400 text-sm">We respond within 24 hours</p>
             </div>
             

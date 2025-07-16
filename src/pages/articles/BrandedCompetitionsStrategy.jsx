@@ -295,7 +295,7 @@ const BrandedCompetitionsStrategy = () => {
                 Explore Competitions Service
               </Link>
               <Link 
-                to="mailto:contact@cinematic.co.ke?subject=Branded Competitions Inquiry&body=Hi Cinematic team,%0D%0A%0D%0AI read your guide on branded competitions and I'm interested in creating competition content for our brand.%0D%0A%0D%0AProject Details:%0D%0A- Company Name:%0D%0A- Industry:%0D%0A- Product/Service Focus:%0D%0A- Competition Type Preference:%0D%0A- Budget Range:%0D%0A%0D%0APlease send me more information.%0D%0A%0D%0AThank you!"
+                  to="/contact"
                 className="border-2 border-cinematic-gold text-cinematic-gold px-8 py-3 rounded-lg font-bold text-center hover:bg-cinematic-gold hover:text-cinematic-black transition-colors"
               >
                 Launch Your Competition

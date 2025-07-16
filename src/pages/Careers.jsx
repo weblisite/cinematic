@@ -157,7 +157,7 @@ const Careers = () => {
                 Ready to join our team? We'd love to hear from you! Send us your resume, portfolio, and a brief cover letter explaining why you'd be a great fit for our team.
               </p>
               <div className="mt-8">
-                <p className="text-lg"><strong className="text-cinematic-gold">Email:</strong> careers@cinematic.co.ke</p>
+                <p className="text-lg"><strong className="text-cinematic-gold">Email:</strong> antony@cinematic.co.ke</p>
                 <p className="text-lg"><strong className="text-cinematic-gold">Subject:</strong> Application for [Position Name]</p>
               </div>
               <div className="mt-6">
@@ -193,7 +193,7 @@ const Careers = () => {
                 Have questions about working with us? Get in touch!
               </p>
               <div className="mt-4">
-                <p><strong className="text-cinematic-gold">Email:</strong> careers@cinematic.co.ke</p>
+                <p><strong className="text-cinematic-gold">Email:</strong> antony@cinematic.co.ke</p>
                 <p><strong className="text-cinematic-gold">Phone:</strong> +254 708 901 911</p>
                 <p><strong className="text-cinematic-gold">Address:</strong> Westlands, Nairobi, Kenya</p>
               </div>

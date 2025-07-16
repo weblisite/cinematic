@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-start justify-center overflow-hidden pt-6 md:pt-8">
+      <section className="relative h-screen flex items-start justify-center overflow-hidden pt-10 md:pt-12">
         {/* Video Background - Clean gradient background */}
         <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-cinematic-black via-cinematic-gray to-cinematic-black">
           {/* Video overlay for actual implementation */}
@@ -232,7 +232,7 @@ const Home = () => {
             </div>
             <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
               <h3 className="text-xl font-bold text-cinematic-gold mb-3">Business Mini-Movies</h3>
-              <p className="text-gray-300 mb-4">Tell your brand's story with compelling cinematic mini-documentaries.</p>
+              <p className="text-gray-300 mb-4">Cinematic documentaries about your business story and values.</p>
               <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 200,000</p>
               <button 
                 onClick={() => navigate('/services')}
@@ -242,41 +242,210 @@ const Home = () => {
               </button>
             </div>
           </div>
+          <div className="text-center">
+            <button 
+              onClick={() => navigate('/services')}
+              className="btn-primary text-lg px-8 py-3 mr-4 mb-4 md:mb-0"
+            >
+              View All Services
+            </button>
+            <button 
+              onClick={() => navigate('/contact')}
+              className="bg-transparent border-2 border-cinematic-gold text-cinematic-gold px-8 py-3 text-lg font-bold rounded-lg hover:bg-cinematic-gold hover:text-cinematic-black transition-all duration-300 glow-gold"
+            >
+              Get Your Quote
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Create Cinematic Magic */}
+      <section className="py-20 px-4 bg-cinematic-black">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-cinematic-gold mb-12 md:mb-16">
+            How We Create Cinematic Magic
+          </h2>
+          <div className="relative">
+            {/* Timeline line - Hidden on mobile, visible on desktop */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cinematic-gold to-transparent"></div>
+            
+            {/* Mobile timeline line */}
+            <div className="md:hidden absolute left-8 top-0 w-0.5 h-full bg-gradient-to-b from-cinematic-gold to-transparent"></div>
+            
+            <div className="space-y-12 md:space-y-16">
+              {/* Step 1 */}
+              <div className="flex items-start md:items-center md:justify-between">
+                {/* Mobile layout */}
+                <div className="md:hidden flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">1</div>
+                  <div className="flex-1">
+                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
+                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Discovery & Strategy</h3>
+                      <p className="text-gray-300 text-sm">We dive deep into your brand, goals, and target audience to craft the perfect cinematic strategy.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Desktop layout */}
+                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
+                  <div className="w-5/12 text-right pr-8">
+                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
+                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">1. Discovery & Strategy</h3>
+                      <p className="text-gray-300">We dive deep into your brand, goals, and target audience to craft the perfect cinematic strategy.</p>
+                    </div>
+                  </div>
+                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">1</div>
+                  <div className="w-5/12"></div>
+                </div>
+              </div>
+              
+              {/* Step 2 */}
+              <div className="flex items-start md:items-center md:justify-between">
+                {/* Mobile layout */}
+                <div className="md:hidden flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">2</div>
+                  <div className="flex-1">
+                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
+                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Creative Development</h3>
+                      <p className="text-gray-300 text-sm">Our creative team develops compelling scripts, storyboards, and visual concepts tailored to your vision.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Desktop layout */}
+                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
+                  <div className="w-5/12"></div>
+                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">2</div>
+                  <div className="w-5/12 pl-8">
+                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
+                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">2. Creative Development</h3>
+                      <p className="text-gray-300">Our creative team develops compelling scripts, storyboards, and visual concepts tailored to your vision.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Step 3 */}
+              <div className="flex items-start md:items-center md:justify-between">
+                {/* Mobile layout */}
+                <div className="md:hidden flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">3</div>
+                  <div className="flex-1">
+                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
+                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Pre-Production</h3>
+                      <p className="text-gray-300 text-sm">Location scouting, casting, equipment planning, and scheduling to ensure flawless execution.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Desktop layout */}
+                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
+                  <div className="w-5/12 text-right pr-8">
+                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
+                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">3. Pre-Production</h3>
+                      <p className="text-gray-300">Location scouting, casting, equipment planning, and scheduling to ensure flawless execution.</p>
+                    </div>
+                  </div>
+                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">3</div>
+                  <div className="w-5/12"></div>
+                </div>
+              </div>
+              
+              {/* Step 4 */}
+              <div className="flex items-start md:items-center md:justify-between">
+                {/* Mobile layout */}
+                <div className="md:hidden flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">4</div>
+                  <div className="flex-1">
+                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
+                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Cinematic Production</h3>
+                      <p className="text-gray-300 text-sm">Professional filming with cinema-grade equipment, expert lighting, and artistic direction.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Desktop layout */}
+                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
+                  <div className="w-5/12"></div>
+                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">4</div>
+                  <div className="w-5/12 pl-8">
+                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
+                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">4. Cinematic Production</h3>
+                      <p className="text-gray-300">Professional filming with cinema-grade equipment, expert lighting, and artistic direction.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Step 5 */}
+              <div className="flex items-start md:items-center md:justify-between">
+                {/* Mobile layout */}
+                <div className="md:hidden flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">5</div>
+                  <div className="flex-1">
+                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
+                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Post-Production Magic</h3>
+                      <p className="text-gray-300 text-sm">Expert editing, color grading, sound design, and visual effects to create the final masterpiece.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Desktop layout */}
+                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
+                  <div className="w-5/12 text-right pr-8">
+                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
+                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">5. Post-Production Magic</h3>
+                      <p className="text-gray-300">Expert editing, color grading, sound design, and visual effects to create the final masterpiece.</p>
+                    </div>
+                  </div>
+                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">5</div>
+                  <div className="w-5/12"></div>
+                </div>
+              </div>
+              
+              {/* Step 6 */}
+              <div className="flex items-start md:items-center md:justify-between">
+                {/* Mobile layout */}
+                <div className="md:hidden flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">6</div>
+                  <div className="flex-1">
+                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
+                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Delivery & Launch</h3>
+                      <p className="text-gray-300 text-sm">Final delivery with multiple formats and ongoing support for successful launch and distribution.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Desktop layout */}
+                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
+                  <div className="w-5/12"></div>
+                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">6</div>
+                  <div className="w-5/12 pl-8">
+                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
+                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">6. Delivery & Launch</h3>
+                      <p className="text-gray-300">Final delivery with multiple formats and ongoing support for successful launch and distribution.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
-              <h3 className="text-xl font-bold text-cinematic-gold mb-3">Branded Reality Shows</h3>
-              <p className="text-gray-300 mb-4">High-production reality shows with your business brand infused in the show.</p>
-              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 300,000</p>
-              <button 
-                onClick={() => navigate('/services')}
-                className="w-full btn-primary focus-visible"
-              >
-                Explore Services
-              </button>
-            </div>
-            <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
-              <h3 className="text-xl font-bold text-cinematic-gold mb-3">Branded Competitions</h3>
-                              <p className="text-gray-300 mb-4">Competition show with your brand at the center stage of the competition.</p>
-              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 400,000</p>
-              <button 
-                onClick={() => navigate('/services')}
-                className="w-full btn-primary focus-visible"
-              >
-                Explore Services
-              </button>
-            </div>
-            <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
-              <h3 className="text-xl font-bold text-cinematic-gold mb-3">Business Reality Shows</h3>
-                              <p className="text-gray-300 mb-4">Reality shows that showcase your business, team culture and all the drama.</p>
-              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 500,000</p>
-              <button 
-                onClick={() => navigate('/services')}
-                className="w-full btn-primary focus-visible"
-              >
-                Explore Services
-              </button>
-            </div>
+          {/* CTA after How We Create Cinematic Magic section */}
+          <div className="text-center mt-12">
+            <p className="text-xl text-gray-300 mb-6">Ready to start your cinematic video production journey?</p>
+            <button 
+              onClick={() => navigate('/contact')}
+              className="btn-primary text-lg px-8 py-3 mr-4 mb-4 md:mb-0"
+            >
+              Start Your Project Today
+            </button>
+            <button 
+              onClick={() => navigate('/portfolio')}
+              className="bg-transparent border-2 border-cinematic-gold text-cinematic-gold px-8 py-3 text-lg font-bold rounded-lg hover:bg-cinematic-gold hover:text-cinematic-black transition-all duration-300 glow-gold"
+            >
+              View Our Portfolio
+            </button>
           </div>
         </div>
       </section>
@@ -549,9 +718,12 @@ const Home = () => {
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Manufacturing</h3>
               <p className="text-gray-300 mb-4">Demonstrating quality, safety, and innovation in production processes.</p>
               <p className="text-gray-400 text-sm mb-6">From production line efficiency to worker expertise, we build trust in your manufacturing capabilities.</p>
-              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
-                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
-              </div>
+              <button 
+                onClick={() => navigate('/industries/manufacturing')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
 
             {/* Hospitality & Tourism */}
@@ -560,9 +732,12 @@ const Home = () => {
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Hospitality & Tourism</h3>
               <p className="text-gray-300 mb-4">Creating compelling destination experiences that drive bookings.</p>
               <p className="text-gray-400 text-sm mb-6">From luxury hotel showcases to authentic travel experiences, we inspire wanderlust and drive reservations.</p>
-              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
-                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
-              </div>
+              <button 
+                onClick={() => navigate('/industries/hospitality-tourism')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
 
             {/* Real Estate & Property */}
@@ -571,9 +746,12 @@ const Home = () => {
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Real Estate & Property</h3>
               <p className="text-gray-300 mb-4">Making properties irresistible and building agent credibility.</p>
               <p className="text-gray-400 text-sm mb-6">From luxury property showcases to agent success stories, we help sell properties faster and build reputations.</p>
-              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
-                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
-              </div>
+              <button 
+                onClick={() => navigate('/industries/real-estate-property')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
 
             {/* Education & Training */}
@@ -582,9 +760,12 @@ const Home = () => {
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Education & Training</h3>
               <p className="text-gray-300 mb-4">Attracting students and showcasing educational outcomes.</p>
               <p className="text-gray-400 text-sm mb-6">From student success stories to campus culture, we help institutions attract the right students and build reputation.</p>
-              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
-                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
-              </div>
+              <button 
+                onClick={() => navigate('/industries/education-training')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
 
             {/* Agriculture & Food */}
@@ -593,43 +774,180 @@ const Home = () => {
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Agriculture & Food</h3>
               <p className="text-gray-300 mb-4">Building consumer trust and showcasing sustainable farming practices.</p>
               <p className="text-gray-400 text-sm mb-6">From farm-to-table narratives to sustainable practice showcases, we connect consumers with quality food sources.</p>
-              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
-                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
-              </div>
+              <button 
+                onClick={() => navigate('/industries/agriculture-food')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
 
-            {/* More Industries - Compact Grid */}
-            <div className="lg:col-span-3">
-              <h4 className="text-xl font-bold text-cinematic-gold mb-6 text-center">Additional Industries We Serve</h4>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
-                  <div className="text-cinematic-gold text-2xl mb-2">⚖️</div>
-                  <h5 className="text-cinematic-gold font-semibold text-sm">Legal Services</h5>
-                </div>
-                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
-                  <div className="text-cinematic-gold text-2xl mb-2">🚗</div>
-                  <h5 className="text-cinematic-gold font-semibold text-sm">Automotive</h5>
-                </div>
-                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
-                  <div className="text-cinematic-gold text-2xl mb-2">🎭</div>
-                  <h5 className="text-cinematic-gold font-semibold text-sm">Entertainment</h5>
-                </div>
-                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
-                  <div className="text-cinematic-gold text-2xl mb-2">🤝</div>
-                  <h5 className="text-cinematic-gold font-semibold text-sm">Non-Profit</h5>
-                </div>
-                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
-                  <div className="text-cinematic-gold text-2xl mb-2">💄</div>
-                  <h5 className="text-cinematic-gold font-semibold text-sm">Fashion & Beauty</h5>
-                </div>
-                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
-                  <div className="text-cinematic-gold text-2xl mb-2">🏋️</div>
-                  <h5 className="text-cinematic-gold font-semibold text-sm">Sports & Fitness</h5>
-                </div>
-              </div>
-              <p className="text-center text-gray-400 text-sm mt-4">
-                Don't see your industry? We create custom solutions for any business sector.
-              </p>
+            {/* Legal Services */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">⚖️</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Legal Services</h3>
+              <p className="text-gray-300 mb-4">Building trust and demonstrating expertise in legal and professional services.</p>
+              <p className="text-gray-400 text-sm mb-6">From client success stories to professional expertise showcases, we make legal services accessible and trustworthy.</p>
+              <button 
+                onClick={() => navigate('/industries/legal-professional-services')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Automotive */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">🚗</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Automotive</h3>
+              <p className="text-gray-300 mb-4">Showcasing automotive excellence and building brand loyalty.</p>
+              <p className="text-gray-400 text-sm mb-6">From vehicle showcases to service excellence, we create content that drives automotive sales and builds trust.</p>
+              <button 
+                onClick={() => navigate('/industries/automotive')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Media & Entertainment */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">🎭</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Media & Entertainment</h3>
+              <p className="text-gray-300 mb-4">Creating compelling content that captivates audiences and builds engagement.</p>
+              <p className="text-gray-400 text-sm mb-6">From behind-the-scenes content to talent showcases, we create content that entertains and engages audiences.</p>
+              <button 
+                onClick={() => navigate('/industries/media-entertainment')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Non-Profit & NGOs */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">🤝</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Non-Profit & NGOs</h3>
+              <p className="text-gray-300 mb-4">Inspiring action and building support for meaningful causes.</p>
+              <p className="text-gray-400 text-sm mb-6">From impact stories to volunteer showcases, we create content that inspires action and builds donor support.</p>
+              <button 
+                onClick={() => navigate('/industries/non-profit-ngos')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Fashion & Beauty */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">💄</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Fashion & Beauty</h3>
+              <p className="text-gray-300 mb-4">Creating stunning visuals that showcase style and beauty excellence.</p>
+              <p className="text-gray-400 text-sm mb-6">From fashion showcases to beauty tutorials, we create content that inspires and drives fashion trends.</p>
+              <button 
+                onClick={() => navigate('/industries/fashion-beauty')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Sports & Fitness */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">🏋️</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Sports & Fitness</h3>
+              <p className="text-gray-300 mb-4">Motivating audiences and showcasing athletic excellence and fitness achievements.</p>
+              <p className="text-gray-400 text-sm mb-6">From training showcases to success stories, we create content that motivates and inspires fitness journeys.</p>
+              <button 
+                onClick={() => navigate('/industries/sports-fitness')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Furniture & Home Décor */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">🛋️</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Furniture & Home Décor</h3>
+              <p className="text-gray-300 mb-4">Showcasing home design excellence and inspiring interior design choices.</p>
+              <p className="text-gray-400 text-sm mb-6">From furniture showcases to home transformations, we create content that inspires home design decisions.</p>
+              <button 
+                onClick={() => navigate('/industries/furniture-home-decor')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Household Goods & Appliances */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">🏠</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Household Goods & Appliances</h3>
+              <p className="text-gray-300 mb-4">Demonstrating product functionality and building consumer trust in household solutions.</p>
+              <p className="text-gray-400 text-sm mb-6">From appliance demonstrations to home efficiency showcases, we create content that drives household purchases.</p>
+              <button 
+                onClick={() => navigate('/industries/household-goods-appliances')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* FMCG - Food & Daily Essentials */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">🛒</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">FMCG - Food & Daily Essentials</h3>
+              <p className="text-gray-300 mb-4">Building brand loyalty and showcasing product quality in fast-moving consumer goods.</p>
+              <p className="text-gray-400 text-sm mb-6">From product showcases to lifestyle integration, we create content that drives FMCG sales and brand loyalty.</p>
+              <button 
+                onClick={() => navigate('/industries/fmcg-food-daily-essentials')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Construction & Building Materials */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">🏗️</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Construction & Building Materials</h3>
+              <p className="text-gray-300 mb-4">Demonstrating construction excellence and building materials quality.</p>
+              <p className="text-gray-400 text-sm mb-6">From project showcases to material demonstrations, we create content that builds trust in construction services.</p>
+              <button 
+                onClick={() => navigate('/industries/construction-building-materials')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Import/Export & Trading */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">🚢</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Import/Export & Trading</h3>
+              <p className="text-gray-300 mb-4">Building international trust and showcasing global trading capabilities.</p>
+              <p className="text-gray-400 text-sm mb-6">From logistics showcases to international partnerships, we create content that builds trust in global trade.</p>
+              <button 
+                onClick={() => navigate('/industries/import-export-trading')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
+            </div>
+
+            {/* Beauty & Cosmetics */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
+              <div className="text-cinematic-gold text-4xl mb-4">💅</div>
+              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Beauty & Cosmetics</h3>
+              <p className="text-gray-300 mb-4">Creating stunning beauty content that showcases products and builds brand loyalty.</p>
+              <p className="text-gray-400 text-sm mb-6">From product demonstrations to transformation stories, we create content that inspires beauty purchases.</p>
+              <button 
+                onClick={() => navigate('/industries/beauty-cosmetics')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
           </div>
           
@@ -1207,198 +1525,6 @@ const Home = () => {
         </div>
       </section>
       
-      {/* How It Works Timeline */}
-      <section className="py-20 px-4 bg-cinematic-black">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-cinematic-gold mb-12 md:mb-16">
-            How We Create Cinematic Magic
-          </h2>
-          <div className="relative">
-            {/* Timeline line - Hidden on mobile, visible on desktop */}
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cinematic-gold to-transparent"></div>
-            
-            {/* Mobile timeline line */}
-            <div className="md:hidden absolute left-8 top-0 w-0.5 h-full bg-gradient-to-b from-cinematic-gold to-transparent"></div>
-            
-            <div className="space-y-12 md:space-y-16">
-              {/* Step 1 */}
-              <div className="flex items-start md:items-center md:justify-between">
-                {/* Mobile layout */}
-                <div className="md:hidden flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">1</div>
-                  <div className="flex-1">
-                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
-                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Discovery & Strategy</h3>
-                      <p className="text-gray-300 text-sm">We dive deep into your brand, goals, and target audience to craft the perfect cinematic strategy.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Desktop layout */}
-                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
-                  <div className="w-5/12 text-right pr-8">
-                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">1. Discovery & Strategy</h3>
-                      <p className="text-gray-300">We dive deep into your brand, goals, and target audience to craft the perfect cinematic strategy.</p>
-                    </div>
-                  </div>
-                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">1</div>
-                  <div className="w-5/12"></div>
-                </div>
-              </div>
-              
-              {/* Step 2 */}
-              <div className="flex items-start md:items-center md:justify-between">
-                {/* Mobile layout */}
-                <div className="md:hidden flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">2</div>
-                  <div className="flex-1">
-                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
-                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Creative Development</h3>
-                      <p className="text-gray-300 text-sm">Our creative team develops compelling scripts, storyboards, and visual concepts tailored to your vision.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Desktop layout */}
-                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
-                  <div className="w-5/12"></div>
-                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">2</div>
-                  <div className="w-5/12 pl-8">
-                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">2. Creative Development</h3>
-                      <p className="text-gray-300">Our creative team develops compelling scripts, storyboards, and visual concepts tailored to your vision.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Step 3 */}
-              <div className="flex items-start md:items-center md:justify-between">
-                {/* Mobile layout */}
-                <div className="md:hidden flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">3</div>
-                  <div className="flex-1">
-                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
-                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Pre-Production</h3>
-                      <p className="text-gray-300 text-sm">Location scouting, casting, equipment planning, and scheduling to ensure flawless execution.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Desktop layout */}
-                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
-                  <div className="w-5/12 text-right pr-8">
-                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">3. Pre-Production</h3>
-                      <p className="text-gray-300">Location scouting, casting, equipment planning, and scheduling to ensure flawless execution.</p>
-                    </div>
-                  </div>
-                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">3</div>
-                  <div className="w-5/12"></div>
-                </div>
-              </div>
-              
-              {/* Step 4 */}
-              <div className="flex items-start md:items-center md:justify-between">
-                {/* Mobile layout */}
-                <div className="md:hidden flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">4</div>
-                  <div className="flex-1">
-                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
-                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Cinematic Production</h3>
-                      <p className="text-gray-300 text-sm">Professional filming with cinema-grade equipment, expert lighting, and artistic direction.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Desktop layout */}
-                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
-                  <div className="w-5/12"></div>
-                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">4</div>
-                  <div className="w-5/12 pl-8">
-                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">4. Cinematic Production</h3>
-                      <p className="text-gray-300">Professional filming with cinema-grade equipment, expert lighting, and artistic direction.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Step 5 */}
-              <div className="flex items-start md:items-center md:justify-between">
-                {/* Mobile layout */}
-                <div className="md:hidden flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">5</div>
-                  <div className="flex-1">
-                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
-                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Post-Production Magic</h3>
-                      <p className="text-gray-300 text-sm">Expert editing, color grading, sound design, and visual effects to create the final masterpiece.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Desktop layout */}
-                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
-                  <div className="w-5/12 text-right pr-8">
-                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">5. Post-Production Magic</h3>
-                      <p className="text-gray-300">Expert editing, color grading, sound design, and visual effects to create the final masterpiece.</p>
-                    </div>
-                  </div>
-                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">5</div>
-                  <div className="w-5/12"></div>
-                </div>
-              </div>
-              
-              {/* Step 6 */}
-              <div className="flex items-start md:items-center md:justify-between">
-                {/* Mobile layout */}
-                <div className="md:hidden flex items-start space-x-6">
-                  <div className="w-16 h-16 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold text-lg flex-shrink-0">6</div>
-                  <div className="flex-1">
-                    <div className="bg-cinematic-gray p-4 rounded-lg glow-gold">
-                      <h3 className="text-xl font-bold text-cinematic-gold mb-3">Delivery & Launch</h3>
-                      <p className="text-gray-300 text-sm">Final delivery with multiple formats and ongoing support for successful launch and distribution.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Desktop layout */}
-                <div className="hidden md:flex md:items-center md:justify-between md:w-full">
-                  <div className="w-5/12"></div>
-                  <div className="w-12 h-12 bg-cinematic-gold rounded-full flex items-center justify-center text-black font-bold relative z-10">6</div>
-                  <div className="w-5/12 pl-8">
-                    <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-                      <h3 className="text-2xl font-bold text-cinematic-gold mb-4">6. Delivery & Launch</h3>
-                      <p className="text-gray-300">Final delivery with multiple formats and ongoing support for successful launch and distribution.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* CTA after How We Create Cinematic Magic section */}
-          <div className="text-center mt-12">
-            <p className="text-xl text-gray-300 mb-6">Ready to start your cinematic video production journey?</p>
-            <button 
-              onClick={() => navigate('/contact')}
-              className="btn-primary text-lg px-8 py-3 mr-4 mb-4 md:mb-0"
-            >
-              Start Your Project Today
-            </button>
-            <button 
-              onClick={() => navigate('/portfolio')}
-              className="bg-transparent border-2 border-cinematic-gold text-cinematic-gold px-8 py-3 text-lg font-bold rounded-lg hover:bg-cinematic-gold hover:text-cinematic-black transition-all duration-300 glow-gold"
-            >
-              View Our Portfolio
-            </button>
-          </div>
-        </div>
-      </section>
-      
-
       {/* Trusted by Leading Brands */}
       <section className="py-20 px-4 bg-gradient-to-b from-cinematic-gray to-cinematic-black">
         <div className="max-w-7xl mx-auto">
@@ -1419,23 +1545,22 @@ const Home = () => {
                <div className="text-gray-400 text-sm mt-2">Celebrity Platform</div>
              </div>
            </div>
-           
-           {/* CTA after Portfolio section */}
-           <div className="text-center mt-12">
-             <p className="text-xl text-gray-300 mb-6">Inspired by our work? Let's create something amazing for your brand</p>
-             <button 
-               onClick={() => navigate('/contact')}
-               className="btn-primary text-lg px-8 py-3 mr-4 mb-4 md:mb-0"
-             >
-               Get Your Free Quote
-             </button>
-             <button 
-               onClick={() => navigate('/portfolio')}
-               className="bg-transparent border-2 border-cinematic-gold text-cinematic-gold px-8 py-3 text-lg font-bold rounded-lg hover:bg-cinematic-gold hover:text-cinematic-black transition-all duration-300 glow-gold"
-             >
-               See More Projects
-             </button>
-           </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-xl text-gray-300 mb-6">Ready to see your success story featured next?</p>
+            <button 
+              onClick={() => navigate('/portfolio')}
+              className="btn-primary text-lg px-8 py-3 mr-4 mb-4 md:mb-0"
+            >
+              View Full Portfolio
+            </button>
+            <button 
+              onClick={() => navigate('/contact')}
+              className="bg-transparent border-2 border-cinematic-gold text-cinematic-gold px-8 py-3 text-lg font-bold rounded-lg hover:bg-cinematic-gold hover:text-cinematic-black transition-all duration-300 glow-gold"
+            >
+              Start Your Project
+            </button>
+          </div>
         </div>
       </section>
       

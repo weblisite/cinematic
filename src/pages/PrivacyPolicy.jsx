@@ -105,7 +105,7 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <div className="mt-4">
-                <p><strong className="text-cinematic-gold">Email:</strong> privacy@cinematic.co.ke</p>
+                <p><strong className="text-cinematic-gold">Email:</strong> antony@cinematic.co.ke</p>
                 <p><strong className="text-cinematic-gold">Phone:</strong> +254 708 901 911</p>
                 <p><strong className="text-cinematic-gold">Address:</strong> Westlands, Nairobi, Kenya</p>
               </div>

@@ -284,7 +284,7 @@ const BusinessMiniMoviesGuide = () => {
                 Explore Mini-Movies Service
               </Link>
               <Link 
-                to="mailto:contact@cinematic.co.ke?subject=Business Mini-Movies Inquiry&body=Hi Cinematic team,%0D%0A%0D%0AI read your guide on business mini-movies and I'm interested in documenting our company story.%0D%0A%0D%0AProject Details:%0D%0A- Company Name:%0D%0A- Industry:%0D%0A- Preferred Duration:%0D%0A- Story Focus:%0D%0A- Timeline:%0D%0A%0D%0APlease send me a custom quote.%0D%0A%0D%0AThank you!"
+                  to="/contact"
                 className="border-2 border-cinematic-gold text-cinematic-gold px-8 py-3 rounded-lg font-bold text-center hover:bg-cinematic-gold hover:text-cinematic-black transition-colors"
               >
                 Get Custom Quote

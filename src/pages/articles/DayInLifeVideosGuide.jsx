@@ -236,12 +236,12 @@ const DayInLifeVideosGuide = () => {
                 >
                   Explore Day-in-Life Service
                 </Link>
-                <a 
-                  href="mailto:contact@cinematic.co.ke?subject=Day-in-Life Videos Inquiry&body=Hi Cinematic team,%0D%0A%0D%0AI read your guide on day-in-life videos and I'm interested in showcasing our team's expertise.%0D%0A%0D%0AProject Details:%0D%0A- Company Name:%0D%0A- Industry:%0D%0A- Team Size:%0D%0A- Departments to Feature:%0D%0A- Target Audience:%0D%0A%0D%0APlease send me more information.%0D%0A%0D%0AThank you!"
+                <Link 
+                  to="/contact"
                   className="inline-block border-2 border-cinematic-gold text-cinematic-gold px-8 py-3 rounded-lg font-bold hover:bg-cinematic-gold hover:text-cinematic-black transition-colors"
                 >
                   Start Your Project
-                </a>
+                </Link>
               </div>
             </div>
 

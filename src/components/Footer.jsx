@@ -23,7 +23,7 @@ const Footer = () => {
               </p>
               <p className="text-gray-400 flex items-center">
                 <span className="text-cinematic-gold mr-2">✉️</span>
-                contact@cinematic.co.ke
+                                  antony@cinematic.co.ke
               </p>
             </div>
           </div>

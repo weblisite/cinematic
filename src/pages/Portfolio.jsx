@@ -205,7 +205,7 @@ const Portfolio = () => {
               Explore Video Ads Service
             </Link>
             <a 
-              href="mailto:contact@cinematic.co.ke?subject=Portfolio Inquiry - Cinematic Video Ads&body=Hi Cinematic team,%0D%0A%0D%0AI'm interested in creating cinematic video ads for my business similar to your portfolio work. Please provide me with more details.%0D%0A%0D%0AProject Details:%0D%0A- Company Name:%0D%0A- Industry:%0D%0A- Platform Focus: Instagram Reels / TikTok%0D%0A- Campaign Goals:%0D%0A- Timeline:%0D%0A%0D%0AThank you!"
+                href="mailto:antony@cinematic.co.ke?subject=Portfolio Inquiry - Cinematic Video Ads&body=Hi Cinematic team,%0D%0A%0D%0AI'm interested in creating cinematic video ads for my business similar to your portfolio work. Please provide me with more details.%0D%0A%0D%0AProject Details:%0D%0A- Company Name:%0D%0A- Industry:%0D%0A- Platform Focus: Instagram Reels / TikTok%0D%0A- Campaign Goals:%0D%0A- Timeline:%0D%0A%0D%0AThank you!"
               className="inline-block border-2 border-cinematic-gold text-cinematic-gold px-8 py-4 rounded-lg font-bold text-lg hover:bg-cinematic-gold hover:text-cinematic-black transition-colors"
             >
               Get Your Quote
