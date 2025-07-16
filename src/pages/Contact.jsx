@@ -15,46 +15,10 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const handleSubmit = (e) => {
+    // Don't prevent default - let the form submit naturally to Netlify
     setIsSubmitting(true)
-    
-    try {
-      // Encode form data properly for Netlify
-      const encode = (data) => {
-        return Object.keys(data)
-          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-          .join("&");
-      }
-
-      const response = await fetch(window.location.pathname, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode({
-          'form-name': 'contact',
-          'bot-field': '',
-          ...formData
-        })
-      })
-
-      if (response.ok) {
-        setSubmitMessage('Thank you for your inquiry! We\'ll get back to you within 24 hours.')
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          company: '',
-          service: '',
-          message: ''
-        })
-      } else {
-        setSubmitMessage('Something went wrong. Please try again or contact us directly.')
-      }
-    } catch (error) {
-      setSubmitMessage('Something went wrong. Please try again or contact us directly.')
-    } finally {
-      setIsSubmitting(false)
-    }
+    setSubmitMessage('Submitting your message...')
   }
 
   const handleChange = (e) => {
@@ -71,6 +35,7 @@ const Contact = () => {
         <form 
           name="contact" 
           method="POST" 
+          action="/"
           data-netlify="true" 
           data-netlify-honeypot="bot-field"
           style={{display: 'none'}}
@@ -117,6 +82,11 @@ const Contact = () => {
             )}
             
             <form 
+              name="contact"
+              method="POST"
+              action="/"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit} 
               className="space-y-6"
             >
