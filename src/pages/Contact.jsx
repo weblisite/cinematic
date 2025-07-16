@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 const Contact = () => {
+  const location = useLocation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,6 +15,16 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
+
+  useEffect(() => {
+    // Check if form was successfully submitted
+    const urlParams = new URLSearchParams(location.search)
+    if (urlParams.get('success') === 'true') {
+      setSubmitMessage('Thank you for your inquiry! We\'ll get back to you within 24 hours.')
+      // Clear the URL parameter
+      window.history.replaceState({}, document.title, '/contact')
+    }
+  }, [location])
 
   const handleSubmit = (e) => {
     // Don't prevent default - let the form submit naturally to Netlify
@@ -84,7 +95,7 @@ const Contact = () => {
             <form 
               name="contact"
               method="POST"
-              action="/"
+              action="/contact?success=true"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit} 
