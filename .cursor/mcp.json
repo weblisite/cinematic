@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+      "browsermcp": {
+        "command": "npx",
+        "args": [
+          "@browsermcp/mcp@latest"
+        ]
+      },
+      "Netlify": {
+        "command": "npx -y @netlify/mcp",
+        "env": {}
+      }
+    }
+  }
+  

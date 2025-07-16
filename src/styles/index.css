@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom Component Classes */
+@layer components {
+  .glow-gold {
+    @apply shadow-lg;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .glow-gold:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+  }
+  
+  .hero-video {
+    @apply opacity-50 object-cover;
+  }
+  
+  .nav-link {
+    @apply transition-colors duration-300;
+  }
+  
+  .nav-link:hover {
+    @apply text-cinematic-gold;
+  }
+  
+  .service-card {
+    @apply transition-transform duration-300;
+  }
+  
+  .service-card:hover {
+    @apply -translate-y-1;
+  }
+  
+  .lazy-load {
+    @apply opacity-0 transition-opacity duration-300;
+  }
+  
+  .lazy-load.loaded {
+    @apply opacity-100;
+  }
+  
+  /* Focus styles for accessibility */
+  .focus-visible {
+    @apply outline-2 outline-offset-2 outline-cinematic-gold;
+  }
+  
+  /* Button variants */
+  .btn-primary {
+    @apply bg-cinematic-gold text-cinematic-black px-6 py-3 font-bold rounded-lg transition-all duration-300;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-yellow-300 transform scale-105;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-cinematic-gold text-cinematic-gold px-6 py-3 font-bold rounded-lg transition-all duration-300;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-cinematic-gold text-cinematic-black;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    filter: contrast(1.5);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffed4e;
+} 

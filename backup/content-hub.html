@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Hub - Video Marketing Insights & Shows | Cinematic Kenya</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Cinematic's content hub: video marketing insights, industry trends, behind-the-scenes content, and branded reality shows from Kenya's premier video agency.">
+    <meta name="keywords" content="video marketing blog Kenya, cinematic content, reality shows Kenya, video production insights, Nairobi video content">
+    <meta name="author" content="Cinematic Kenya">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cinematic Content Hub - Video Marketing Insights & Original Shows">
+    <meta property="og:description" content="Discover video marketing insights, industry trends, and watch our original branded reality shows and competitions.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Cinematic+Content+Hub">
+    <meta property="og:url" content="https://cinematic.co.ke/content-hub">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Cinematic Content Hub",
+        "description": "Video marketing insights and original content from Kenya's premier video production agency",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Cinematic",
+            "url": "https://cinematic.co.ke"
+        },
+        "url": "https://cinematic.co.ke/content-hub"
+    }
+    </script>
+    
+    <!-- CDN Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CDN Scripts -->
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-router-dom@6.3.0/dist/umd/react-router-dom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.5/babel.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        
+        .glow-gold {
+            animation: glowPulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glowPulse {
+            from {
+                box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            }
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+        
+        .share-button:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+        
+        /* WCAG 2.1 Compliance */
+        .focus:focus {
+            outline: 2px solid #FFD700;
+            outline-offset: 2px;
+        }
+        
+        .reading-time {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { BrowserRouter, Routes, Route, Link, useNavigate } = ReactRouterDOM;
+        
+        // Navigation Component
+        const Navigation = () => {
+            const [isMenuOpen, setIsMenuOpen] = useState(false);
+            
+            return (
+                <nav className="fixed top-0 w-full bg-black bg-opacity-90 backdrop-blur-sm z-50 border-b border-yellow-400">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="flex justify-between items-center h-16">
+                            <Link to="/" className="text-2xl font-bold text-yellow-400 hover:text-yellow-300 transition-colors">
+                                Cinematic
+                            </Link>
+                            
+                            {/* Desktop Navigation */}
+                            <div className="hidden md:flex space-x-8">
+                                <Link to="/" className="text-white hover:text-yellow-400 px-3 py-2 focus">Home</Link>
+                                <Link to="/services" className="text-white hover:text-yellow-400 px-3 py-2 focus">Services</Link>
+                                <Link to="/portfolio" className="text-white hover:text-yellow-400 px-3 py-2 focus">Portfolio</Link>
+                                <Link to="/content-hub" className="text-yellow-400 px-3 py-2 focus">Content Hub</Link>
+                                <Link to="/contact" className="text-white hover:text-yellow-400 px-3 py-2 focus">Contact</Link>
+                                <Link to="/about" className="text-white hover:text-yellow-400 px-3 py-2 focus">About</Link>
+                            </div>
+                            
+                            {/* Mobile Menu Button */}
+                            <div className="md:hidden">
+                                <button
+                                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                    className="text-white hover:text-yellow-400 focus"
+                                    aria-label="Toggle menu"
+                                >
+                                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        {isMenuOpen ? (
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                        ) : (
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                        )}
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        {/* Mobile Navigation */}
+                        {isMenuOpen && (
+                            <div className="md:hidden">
+                                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black bg-opacity-95">
+                                    <Link to="/" className="block text-white hover:text-yellow-400 px-3 py-2 focus">Home</Link>
+                                    <Link to="/services" className="block text-white hover:text-yellow-400 px-3 py-2 focus">Services</Link>
+                                    <Link to="/portfolio" className="block text-white hover:text-yellow-400 px-3 py-2 focus">Portfolio</Link>
+                                    <Link to="/content-hub" className="block text-yellow-400 px-3 py-2 focus">Content Hub</Link>
+                                    <Link to="/contact" className="block text-white hover:text-yellow-400 px-3 py-2 focus">Contact</Link>
+                                    <Link to="/about" className="block text-white hover:text-yellow-400 px-3 py-2 focus">About</Link>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </nav>
+            );
+        };
+        
+        // Content Hub Page Component
+        const ContentHubPage = () => {
+            const navigate = useNavigate();
+            
+            useEffect(() => {
+                // Lazy loading implementation
+                const lazyElements = document.querySelectorAll('.lazy-load');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('loaded');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                lazyElements.forEach(el => observer.observe(el));
+                
+                return () => observer.disconnect();
+            }, []);
+            
+            const blogPosts = [
+                {
+                    id: 1,
+                    title: 'Why Cinematic Ads Work for SMEs in Kenya',
+                    excerpt: 'Discover how small and medium enterprises in Kenya are using cinematic video advertising to compete with larger corporations and drive significant business growth.',
+                    author: 'David Kiprotich',
+                    date: '2024-01-15',
+                    readTime: '5 min read',
+                    category: 'Marketing Strategy',
+                    image: 'https://via.placeholder.com/600x300.png?text=SME+Cinematic+Ads',
+                    tags: ['SME', 'Advertising', 'Kenya', 'Growth']
+                },
+                {
+                    id: 2,
+                    title: 'How to Leverage Video Marketing in Kenya: 2024 Guide',
+                    excerpt: 'A comprehensive guide to video marketing in the Kenyan market, including platform preferences, content strategies, and budget optimization for maximum ROI.',
+                    author: 'Sarah Muthoni',
+                    date: '2024-01-10',
+                    readTime: '8 min read',
+                    category: 'Industry Insights',
+                    image: 'https://via.placeholder.com/600x300.png?text=Video+Marketing+Kenya',
+                    tags: ['Video Marketing', 'Strategy', 'ROI', 'Kenya']
+                },
+                {
+                    id: 3,
+                    title: 'Behind the Scenes: Creating Award-Winning Reality Shows',
+                    excerpt: 'Take an exclusive look at our production process for branded reality shows, from concept development to final delivery, including challenges and solutions.',
+                    author: 'Michael Ochieng',
+                    date: '2024-01-05',
+                    readTime: '6 min read',
+                    category: 'Production',
+                    image: 'https://via.placeholder.com/600x300.png?text=Reality+Show+BTS',
+                    tags: ['Reality Shows', 'Production', 'Behind the Scenes']
+                },
+                {
+                    id: 4,
+                    title: 'The Psychology of Cinematic Storytelling in Business',
+                    excerpt: 'Understanding how cinematic techniques create emotional connections with audiences and drive business results through psychological storytelling principles.',
+                    author: 'Grace Wanjiku',
+                    date: '2023-12-28',
+                    readTime: '7 min read',
+                    category: 'Creative Strategy',
+                    image: 'https://via.placeholder.com/600x300.png?text=Cinematic+Psychology',
+                    tags: ['Storytelling', 'Psychology', 'Cinematic', 'Business']
+                },
+                {
+                    id: 5,
+                    title: 'ROI Metrics: Measuring Video Marketing Success',
+                    excerpt: 'Learn how to track and measure the return on investment from your video marketing campaigns with practical metrics and tools for Kenyan businesses.',
+                    author: 'Peter Njoroge',
+                    date: '2023-12-20',
+                    readTime: '9 min read',
+                    category: 'Analytics',
+                    image: 'https://via.placeholder.com/600x300.png?text=Video+ROI+Metrics',
+                    tags: ['ROI', 'Analytics', 'Metrics', 'Measurement']
+                },
+                {
+                    id: 6,
+                    title: 'Mobile-First Video Content for African Markets',
+                    excerpt: 'Optimizing video content for mobile consumption in Africa, considering data costs, device capabilities, and viewing behaviors across the continent.',
+                    author: 'Emily Chebet',
+                    date: '2023-12-15',
+                    readTime: '4 min read',
+                    category: 'Mobile Strategy',
+                    image: 'https://via.placeholder.com/600x300.png?text=Mobile+Video+Africa',
+                    tags: ['Mobile', 'Africa', 'Optimization', 'Strategy']
+                }
+            ];
+            
+            const videoShows = [
+                {
+                    id: 1,
+                    title: 'Kenyan Entrepreneurs: Rising Stars',
+                    description: 'A documentary series following young Kenyan entrepreneurs as they build innovative businesses and overcome challenges.',
+                    episodes: 8,
+                    views: '2.5M',
+                    videoId: 'dQw4w9WgXcQ',
+                    thumbnail: 'https://via.placeholder.com/600x400.png?text=Rising+Stars+Series',
+                    sponsor: 'Equity Bank',
+                    category: 'Reality Series'
+                },
+                {
+                    id: 2,
+                    title: 'Tech Innovators Kenya',
+                    description: 'Showcasing Kenya\'s most promising tech startups and the innovators behind groundbreaking solutions.',
+                    episodes: 6,
+                    views: '1.8M',
+                    videoId: 'dQw4w9WgXcQ',
+                    thumbnail: 'https://via.placeholder.com/600x400.png?text=Tech+Innovators',
+                    sponsor: 'Safaricom',
+                    category: 'Documentary'
+                },
+                {
+                    id: 3,
+                    title: 'The Pitch Kenya',
+                    description: 'Entrepreneurs pitch their business ideas to a panel of investors in this exciting competition format.',
+                    episodes: 12,
+                    views: '3.2M',
+                    videoId: 'dQw4w9WgXcQ',
+                    thumbnail: 'https://via.placeholder.com/600x400.png?text=The+Pitch+Kenya',
+                    sponsor: 'KCB Bank',
+                    category: 'Competition'
+                }
+            ];
+            
+            const shareContent = (title, url) => {
+                if (navigator.share) {
+                    navigator.share({
+                        title: title,
+                        url: url || window.location.href
+                    });
+                } else {
+                    // Fallback for browsers that don't support Web Share API
+                    navigator.clipboard.writeText(url || window.location.href);
+                    alert('Link copied to clipboard!');
+                }
+            };
+            
+            const shareToSocial = (platform, title, url) => {
+                const shareUrl = url || window.location.href;
+                const encodedTitle = encodeURIComponent(title);
+                const encodedUrl = encodeURIComponent(shareUrl);
+                
+                let shareLink = '';
+                switch(platform) {
+                    case 'twitter':
+                        shareLink = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+                        break;
+                    case 'facebook':
+                        shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+                        break;
+                    case 'linkedin':
+                        shareLink = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+                        break;
+                    case 'whatsapp':
+                        shareLink = `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`;
+                        break;
+                }
+                
+                if (shareLink) {
+                    window.open(shareLink, '_blank', 'width=600,height=400');
+                }
+            };
+            
+            return (
+                <div className="min-h-screen">
+                    {/* Hero Section */}
+                    <section className="relative h-96 flex items-center justify-center overflow-hidden">
+                        <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-black via-gray-900 to-black">
+                            <img 
+                                src="https://via.placeholder.com/1920x400.png?text=Explore+Our+Content"
+                                alt="Cinematic content hub showcase"
+                                className="w-full h-full object-cover opacity-50"
+                                loading="lazy"
+                            />
+                        </div>
+                        
+                        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                            <h1 className="text-4xl md:text-6xl font-bold text-yellow-400 mb-6">
+                                Explore Our Content
+                            </h1>
+                            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+                                Discover video marketing insights, industry trends, behind-the-scenes content, and watch our original branded reality shows.
+                            </p>
+                        </div>
+                    </section>
+                    
+                    {/* Featured Content */}
+                    <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+                        <div className="max-w-7xl mx-auto">
+                            <h2 className="text-4xl md:text-5xl font-bold text-center text-yellow-400 mb-16">
+                                Featured Content
+                            </h2>
+                            
+                            <div className="grid lg:grid-cols-2 gap-8 mb-16">
+                                {/* Featured Blog Post */}
+                                <div className="glow-gold bg-gray-900 rounded-lg overflow-hidden content-card lazy-load">
+                                    <img 
+                                        src={blogPosts[0].image}
+                                        alt={blogPosts[0].title}
+                                        className="w-full h-48 object-cover"
+                                        loading="lazy"
+                                    />
+                                    <div className="p-6">
+                                        <div className="flex items-center justify-between mb-3">
+                                            <span className="bg-yellow-400 text-black px-3 py-1 rounded text-sm font-bold">
+                                                {blogPosts[0].category}
+                                            </span>
+                                            <span className="text-gray-400 text-sm reading-time">
+                                                {blogPosts[0].readTime}
+                                            </span>
+                                        </div>
+                                        <h3 className="text-2xl font-bold text-yellow-400 mb-3">{blogPosts[0].title}</h3>
+                                        <p className="text-gray-300 mb-4 leading-relaxed">{blogPosts[0].excerpt}</p>
+                                        <div className="flex items-center justify-between">
+                                            <div className="text-sm text-gray-400">
+                                                By {blogPosts[0].author} • {new Date(blogPosts[0].date).toLocaleDateString()}
+                                            </div>
+                                            <button className="text-yellow-400 font-bold hover:text-yellow-300 focus">
+                                                Read More →
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                {/* Featured Video Show */}
+                                <div className="glow-gold bg-gray-900 rounded-lg overflow-hidden content-card lazy-load">
+                                    <div className="relative">
+                                        <iframe 
+                                            className="w-full h-48"
+                                            src={`https://www.youtube.com/embed/${videoShows[0].videoId}`}
+                                            title={videoShows[0].title}
+                                            frameBorder="0"
+                                            allowFullScreen
+                                            loading="lazy"
+                                            aria-label={`${videoShows[0].title} video`}
+                                        ></iframe>
+                                        <div className="absolute top-4 left-4 bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">
+                                            {videoShows[0].category}
+                                        </div>
+                                    </div>
+                                    <div className="p-6">
+                                        <h3 className="text-2xl font-bold text-yellow-400 mb-3">{videoShows[0].title}</h3>
+                                        <p className="text-gray-300 mb-4 leading-relaxed">{videoShows[0].description}</p>
+                                        <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                                            <span>{videoShows[0].episodes} Episodes</span>
+                                            <span>{videoShows[0].views} Views</span>
+                                            <span>Sponsored by {videoShows[0].sponsor}</span>
+                                        </div>
+                                        <button className="w-full bg-yellow-400 text-black py-2 px-4 rounded font-bold hover:bg-yellow-300 transition-colors focus">
+                                            Watch Series
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Blog Section */}
+                    <section className="py-20 px-4 bg-black">
+                        <div className="max-w-7xl mx-auto">
+                            <div className="flex items-center justify-between mb-16">
+                                <h2 className="text-4xl md:text-5xl font-bold text-yellow-400">
+                                    Latest Insights
+                                </h2>
+                                <p className="text-gray-400 hidden md:block">
+                                    Expert insights on video marketing and production
+                                </p>
+                            </div>
+                            
+                            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                                {blogPosts.slice(1).map((post) => (
+                                    <article key={post.id} className="bg-gray-900 rounded-lg overflow-hidden content-card lazy-load">
+                                        <img 
+                                            src={post.image}
+                                            alt={post.title}
+                                            className="w-full h-40 object-cover"
+                                            loading="lazy"
+                                        />
+                                        <div className="p-6">
+                                            <div className="flex items-center justify-between mb-3">
+                                                <span className="bg-gray-800 text-yellow-400 px-2 py-1 rounded text-xs font-bold">
+                                                    {post.category}
+                                                </span>
+                                                <span className="text-gray-400 text-xs reading-time">
+                                                    {post.readTime}
+                                                </span>
+                                            </div>
+                                            
+                                            <h3 className="text-xl font-bold text-yellow-400 mb-3 leading-tight">{post.title}</h3>
+                                            <p className="text-gray-300 text-sm mb-4 leading-relaxed">{post.excerpt}</p>
+                                            
+                                            <div className="flex items-center justify-between mb-4">
+                                                <div className="text-xs text-gray-400">
+                                                    By {post.author}<br/>
+                                                    {new Date(post.date).toLocaleDateString()}
+                                                </div>
+                                                <button className="text-yellow-400 font-bold hover:text-yellow-300 text-sm focus">
+                                                    Read More →
+                                                </button>
+                                            </div>
+                                            
+                                            {/* Tags */}
+                                            <div className="flex flex-wrap gap-2">
+                                                {post.tags.map((tag, index) => (
+                                                    <span key={index} className="bg-gray-800 text-gray-400 px-2 py-1 rounded text-xs">
+                                                        #{tag}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                            
+                                            {/* Share Buttons */}
+                                            <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-800">
+                                                <span className="text-gray-400 text-xs">Share:</span>
+                                                <div className="flex space-x-2">
+                                                    <button 
+                                                        onClick={() => shareToSocial('twitter', post.title)}
+                                                        className="text-blue-400 hover:text-blue-300 share-button focus"
+                                                        aria-label={`Share ${post.title} on Twitter`}
+                                                    >
+                                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                                        </svg>
+                                                    </button>
+                                                    <button 
+                                                        onClick={() => shareToSocial('facebook', post.title)}
+                                                        className="text-blue-600 hover:text-blue-500 share-button focus"
+                                                        aria-label={`Share ${post.title} on Facebook`}
+                                                    >
+                                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                                        </svg>
+                                                    </button>
+                                                    <button 
+                                                        onClick={() => shareToSocial('linkedin', post.title)}
+                                                        className="text-blue-700 hover:text-blue-600 share-button focus"
+                                                        aria-label={`Share ${post.title} on LinkedIn`}
+                                                    >
+                                                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                ))}
+                            </div>
+                            
+                            <div className="text-center mt-12">
+                                <button className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors focus">
+                                    View All Articles
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Video Channel Section */}
+                    <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+                        <div className="max-w-7xl mx-auto">
+                            <div className="text-center mb-16">
+                                <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
+                                    Our Original Shows
+                                </h2>
+                                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                                    Watch our branded reality shows and competitions that showcase Kenyan talent while delivering marketing results for our sponsors.
+                                </p>
+                            </div>
+                            
+                            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                                {videoShows.map((show) => (
+                                    <div key={show.id} className="bg-gray-900 rounded-lg overflow-hidden content-card lazy-load">
+                                        <div className="relative">
+                                            <iframe 
+                                                className="w-full h-48"
+                                                src={`https://www.youtube.com/embed/${show.videoId}`}
+                                                title={show.title}
+                                                frameBorder="0"
+                                                allowFullScreen
+                                                loading="lazy"
+                                                aria-label={`${show.title} video`}
+                                            ></iframe>
+                                            <div className="absolute top-4 left-4 bg-red-600 text-white px-2 py-1 rounded text-xs font-bold">
+                                                {show.category}
+                                            </div>
+                                            <div className="absolute top-4 right-4 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-xs">
+                                                {show.views} views
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="p-6">
+                                            <h3 className="text-xl font-bold text-yellow-400 mb-3">{show.title}</h3>
+                                            <p className="text-gray-300 text-sm mb-4 leading-relaxed">{show.description}</p>
+                                            
+                                            <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                                                <span>{show.episodes} Episodes</span>
+                                                <span>By {show.sponsor}</span>
+                                            </div>
+                                            
+                                            <div className="flex gap-3">
+                                                <button className="flex-1 bg-yellow-400 text-black py-2 px-4 rounded font-bold hover:bg-yellow-300 transition-colors focus">
+                                                    Watch Now
+                                                </button>
+                                                <button 
+                                                    onClick={() => shareContent(show.title)}
+                                                    className="bg-gray-800 text-yellow-400 px-4 py-2 rounded hover:bg-gray-700 transition-colors focus"
+                                                    aria-label={`Share ${show.title}`}
+                                                >
+                                                    📤
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            
+                            <div className="text-center mt-12">
+                                <button className="bg-red-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors focus">
+                                    Subscribe to Our Channel
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Newsletter & Social Section */}
+                    <section className="py-20 px-4 bg-black">
+                        <div className="max-w-4xl mx-auto text-center">
+                            <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
+                                Stay Connected
+                            </h2>
+                            <p className="text-xl text-gray-300 mb-8">
+                                Get the latest insights, behind-the-scenes content, and be first to know about new shows and opportunities.
+                            </p>
+                            
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                                <input 
+                                    type="email" 
+                                    placeholder="Enter your email for updates"
+                                    className="flex-1 max-w-md px-4 py-3 bg-gray-900 text-white border border-gray-700 rounded-lg focus:border-yellow-400 focus:outline-none focus"
+                                    aria-label="Email address for updates"
+                                />
+                                <button className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors focus">
+                                    Subscribe
+                                </button>
+                            </div>
+                            
+                            <div className="flex justify-center space-x-6">
+                                <a href="https://twitter.com/cinematic" className="text-blue-400 hover:text-blue-300 text-2xl focus" aria-label="Follow us on Twitter">
+                                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://instagram.com/cinematic" className="text-pink-400 hover:text-pink-300 text-2xl focus" aria-label="Follow us on Instagram">
+                                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.329-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.412-3.329c.881-.881 2.032-1.297 3.329-1.297s2.448.416 3.329 1.297c.881.881 1.297 2.032 1.297 3.329s-.416 2.448-1.297 3.329c-.881.881-2.032 1.297-3.329 1.297zm7.718-6.541c0-.784-.245-1.47-.735-2.058-.49-.588-1.176-.833-1.96-.833-.784 0-1.47.245-2.058.833-.588.588-.833 1.274-.833 2.058 0 .784.245 1.47.833 2.058.588.588 1.274.833 2.058.833.784 0 1.47-.245 1.96-.833.49-.588.735-1.274.735-2.058z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://youtube.com/cinematic" className="text-red-400 hover:text-red-300 text-2xl focus" aria-label="Subscribe to our YouTube channel">
+                                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://tiktok.com/@cinematic" className="text-white hover:text-gray-300 text-2xl focus" aria-label="Follow us on TikTok">
+                                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Sponsor CTA */}
+                    <section className="py-20 px-4 bg-gradient-to-r from-yellow-400 to-yellow-600">
+                        <div className="max-w-4xl mx-auto text-center">
+                            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                                Sponsor Our Next Show
+                            </h2>
+                            <p className="text-xl text-black mb-8 opacity-90">
+                                Reach millions of engaged viewers while supporting Kenyan talent. Partner with us to create branded content that delivers results.
+                            </p>
+                            <button 
+                                onClick={() => navigate('/contact')}
+                                className="bg-black text-yellow-400 px-8 py-4 text-xl font-bold rounded-lg hover:bg-gray-900 transition-all duration-300 glow-gold focus"
+                            >
+                                Become a Sponsor
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            );
+        };
+        
+        // Footer Component
+        const Footer = () => {
+            const [email, setEmail] = useState('');
+            
+            const handleNewsletterSubmit = (e) => {
+                e.preventDefault();
+                if (email) {
+                    alert('Thank you for subscribing! You\'ll receive updates about our latest projects and industry insights.');
+                    setEmail('');
+                }
+            };
+            
+            return (
+                <footer className="bg-black border-t border-yellow-400 py-12 px-4">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="grid md:grid-cols-4 gap-8 mb-8">
+                            <div>
+                                <h3 className="text-2xl font-bold text-yellow-400 mb-4">Cinematic</h3>
+                                <p className="text-gray-300 mb-4">
+                                    Kenya's premier video production agency crafting cinematic content that elevates brands.
+                                </p>
+                                <div className="flex space-x-4">
+                                    <a href="https://twitter.com/cinematic" className="text-yellow-400 hover:text-yellow-300 focus" aria-label="Follow us on Twitter">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                                    </a>
+                                    <a href="https://instagram.com/cinematic" className="text-yellow-400 hover:text-yellow-300 focus" aria-label="Follow us on Instagram">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.329-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.412-3.329c.881-.881 2.032-1.297 3.329-1.297s2.448.416 3.329 1.297c.881.881 1.297 2.032 1.297 3.329s-.416 2.448-1.297 3.329c-.881.881-2.032 1.297-3.329 1.297zm7.718-6.541c0-.784-.245-1.47-.735-2.058-.49-.588-1.176-.833-1.96-.833-.784 0-1.47.245-2.058.833-.588.588-.833 1.274-.833 2.058 0 .784.245 1.47.833 2.058.588.588 1.274.833 2.058.833.784 0 1.47-.245 1.96-.833.49-.588.735-1.274.735-2.058z"/></svg>
+                                    </a>
+                                    <a href="https://youtube.com/cinematic" className="text-yellow-400 hover:text-yellow-300 focus" aria-label="Subscribe to our YouTube channel">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                    </a>
+                                    <a href="https://tiktok.com/@cinematic" className="text-yellow-400 hover:text-yellow-300 focus" aria-label="Follow us on TikTok">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 className="text-lg font-bold text-yellow-400 mb-4">Services</h4>
+                                <ul className="text-gray-300 space-y-2">
+                                    <li><Link to="/services" className="hover:text-yellow-400 transition-colors focus">Cinematic Video Ads</Link></li>
+                                    <li><Link to="/services" className="hover:text-yellow-400 transition-colors focus">Business Mini-Movies</Link></li>
+                                    <li><Link to="/services" className="hover:text-yellow-400 transition-colors focus">Branded Reality Shows</Link></li>
+                                    <li><Link to="/services" className="hover:text-yellow-400 transition-colors focus">Day-in-the-Life Videos</Link></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 className="text-lg font-bold text-yellow-400 mb-4">Company</h4>
+                                <ul className="text-gray-300 space-y-2">
+                                    <li><Link to="/about" className="hover:text-yellow-400 transition-colors focus">About Us</Link></li>
+                                    <li><Link to="/portfolio" className="hover:text-yellow-400 transition-colors focus">Portfolio</Link></li>
+                                    <li><Link to="/content-hub" className="hover:text-yellow-400 transition-colors focus">Content Hub</Link></li>
+                                    <li><Link to="/contact" className="hover:text-yellow-400 transition-colors focus">Contact</Link></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 className="text-lg font-bold text-yellow-400 mb-4">Newsletter</h4>
+                                <p className="text-gray-300 mb-4">Stay updated with our latest projects and industry insights.</p>
+                                <form onSubmit={handleNewsletterSubmit} className="space-y-3">
+                                    <input
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="Enter your email"
+                                        className="w-full px-3 py-2 bg-gray-800 text-white border border-gray-600 rounded focus:border-yellow-400 focus:outline-none focus"
+                                        required
+                                        aria-label="Email address for newsletter"
+                                    />
+                                    <button 
+                                        type="submit"
+                                        className="w-full bg-yellow-400 text-black py-2 px-4 rounded font-bold hover:bg-yellow-300 transition-colors focus"
+                                    >
+                                        Subscribe
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div className="border-t border-gray-800 pt-8 text-center">
+                            <p className="text-gray-400">
+                                © 2024 Cinematic Kenya. All rights reserved. | 
+                                <span className="ml-1">Crafting cinematic videos that elevate brands.</span>
+                            </p>
+                            <p className="text-gray-500 text-sm mt-2">
+                                Westlands, Nairobi | +254 700 123 456 | contact@cinematic.co.ke
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            );
+        };
+        
+        // Main App Component
+        const App = () => {
+            return (
+                <BrowserRouter>
+                    <div className="min-h-screen bg-black text-white">
+                        <Navigation />
+                        <main className="pt-16">
+                            <Routes>
+                                <Route path="/" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">Homepage</h1></div>} />
+                                <Route path="/services" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">Services Page</h1></div>} />
+                                <Route path="/portfolio" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">Portfolio Page</h1></div>} />
+                                <Route path="/content-hub" element={<ContentHubPage />} />
+                                <Route path="/contact" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">Contact Page Coming Soon</h1></div>} />
+                                <Route path="/about" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">About Page Coming Soon</h1></div>} />
+                            </Routes>
+                        </main>
+                        <Footer />
+                    </div>
+                </BrowserRouter>
+            );
+        };
+        
+        // Render the app
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html> 

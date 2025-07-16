@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Cinematic - Kenya's Premier Video Production Agency | Our Story</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Cinematic Kenya, our mission to craft cinematic videos that elevate brands, meet our expert team, and discover our journey as Kenya's premier video production agency.">
+    <meta name="keywords" content="about Cinematic Kenya, video production team Nairobi, Kenyan video agency story, cinematic production experts">
+    <meta name="author" content="Cinematic Kenya">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Cinematic - Meet Kenya's Premier Video Production Team">
+    <meta property="og:description" content="Discover the story behind Cinematic Kenya, our mission, our expert team, and our journey to becoming Kenya's premier video production agency.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=About+Cinematic+Team">
+    <meta property="og:url" content="https://cinematic.co.ke/about">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Cinematic",
+        "description": "Learn about Cinematic Kenya's mission, team, and journey as a premier video production agency",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Cinematic",
+            "foundingDate": "2020",
+            "founder": [
+                {
+                    "@type": "Person",
+                    "name": "David Kiprotich",
+                    "jobTitle": "Creative Director"
+                }
+            ],
+            "employee": [
+                {
+                    "@type": "Person",
+                    "name": "Sarah Muthoni",
+                    "jobTitle": "Lead Cinematographer"
+                },
+                {
+                    "@type": "Person",
+                    "name": "Michael Ochieng",
+                    "jobTitle": "Producer"
+                }
+            ]
+        }
+    }
+    </script>
+    
+    <!-- CDN Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CDN Scripts -->
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-router-dom@6.3.0/dist/umd/react-router-dom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/babel-standalone@7.22.5/babel.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        
+        .glow-gold {
+            animation: glowPulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glowPulse {
+            from {
+                box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            }
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+        
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* WCAG 2.1 Compliance */
+        .focus:focus {
+            outline: 2px solid #FFD700;
+            outline-offset: 2px;
+        }
+        
+        .value-icon {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { BrowserRouter, Routes, Route, Link, useNavigate } = ReactRouterDOM;
+        
+        // Navigation Component
+        const Navigation = () => {
+            const [isMenuOpen, setIsMenuOpen] = useState(false);
+            
+            return (
+                <nav className="fixed top-0 w-full bg-black bg-opacity-90 backdrop-blur-sm z-50 border-b border-yellow-400">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="flex justify-between items-center h-16">
+                            <Link to="/" className="text-2xl font-bold text-yellow-400 hover:text-yellow-300 transition-colors">
+                                Cinematic
+                            </Link>
+                            
+                            {/* Desktop Navigation */}
+                            <div className="hidden md:flex space-x-8">
+                                <Link to="/" className="text-white hover:text-yellow-400 px-3 py-2 focus">Home</Link>
+                                <Link to="/services" className="text-white hover:text-yellow-400 px-3 py-2 focus">Services</Link>
+                                <Link to="/portfolio" className="text-white hover:text-yellow-400 px-3 py-2 focus">Portfolio</Link>
+                                <Link to="/content-hub" className="text-white hover:text-yellow-400 px-3 py-2 focus">Content Hub</Link>
+                                <Link to="/contact" className="text-white hover:text-yellow-400 px-3 py-2 focus">Contact</Link>
+                                <Link to="/about" className="text-yellow-400 px-3 py-2 focus">About</Link>
+                            </div>
+                            
+                            {/* Mobile Menu Button */}
+                            <div className="md:hidden">
+                                <button
+                                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                                    className="text-white hover:text-yellow-400 focus"
+                                    aria-label="Toggle menu"
+                                >
+                                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        {isMenuOpen ? (
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                        ) : (
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                        )}
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        {/* Mobile Navigation */}
+                        {isMenuOpen && (
+                            <div className="md:hidden">
+                                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black bg-opacity-95">
+                                    <Link to="/" className="block text-white hover:text-yellow-400 px-3 py-2 focus">Home</Link>
+                                    <Link to="/services" className="block text-white hover:text-yellow-400 px-3 py-2 focus">Services</Link>
+                                    <Link to="/portfolio" className="block text-white hover:text-yellow-400 px-3 py-2 focus">Portfolio</Link>
+                                    <Link to="/content-hub" className="block text-white hover:text-yellow-400 px-3 py-2 focus">Content Hub</Link>
+                                    <Link to="/contact" className="block text-white hover:text-yellow-400 px-3 py-2 focus">Contact</Link>
+                                    <Link to="/about" className="block text-yellow-400 px-3 py-2 focus">About</Link>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </nav>
+            );
+        };
+        
+        // About Page Component
+        const AboutPage = () => {
+            const navigate = useNavigate();
+            
+            useEffect(() => {
+                // Lazy loading implementation
+                const lazyElements = document.querySelectorAll('.lazy-load');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('loaded');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                
+                lazyElements.forEach(el => observer.observe(el));
+                
+                return () => observer.disconnect();
+            }, []);
+            
+            const teamMembers = [
+                {
+                    id: 1,
+                    name: 'David Kiprotich',
+                    role: 'Creative Director & Founder',
+                    image: 'https://via.placeholder.com/300x300.png?text=David+Kiprotich',
+                    bio: 'With over 8 years of experience in cinematic storytelling, David founded Cinematic with a vision to bring Hollywood-level production quality to Kenyan businesses. His background in film studies and marketing creates the perfect blend of artistic vision and business acumen.',
+                    expertise: ['Creative Direction', 'Brand Strategy', 'Cinematic Storytelling'],
+                    linkedin: 'https://linkedin.com/in/davidkirotich',
+                    achievements: ['Award-winning director', '50+ successful campaigns', 'Industry thought leader']
+                },
+                {
+                    id: 2,
+                    name: 'Sarah Muthoni',
+                    role: 'Lead Cinematographer',
+                    image: 'https://via.placeholder.com/300x300.png?text=Sarah+Muthoni',
+                    bio: 'Sarah brings technical excellence and artistic flair to every project. With a degree in Film Production and experience working on international documentaries, she ensures every frame tells a compelling story.',
+                    expertise: ['Cinematography', 'Lighting Design', 'Color Grading'],
+                    linkedin: 'https://linkedin.com/in/sarahmuthoni',
+                    achievements: ['International film festival selections', 'Master of visual storytelling', 'Technical innovation leader']
+                },
+                {
+                    id: 3,
+                    name: 'Michael Ochieng',
+                    role: 'Producer & Operations Manager',
+                    image: 'https://via.placeholder.com/300x300.png?text=Michael+Ochieng',
+                    bio: 'Michael orchestrates the complex logistics behind our productions, ensuring projects run smoothly from concept to delivery. His project management expertise and industry connections make the impossible possible.',
+                    expertise: ['Project Management', 'Client Relations', 'Production Logistics'],
+                    linkedin: 'https://linkedin.com/in/michaelochieng',
+                    achievements: ['On-time delivery expert', 'Client satisfaction champion', 'Process optimization specialist']
+                },
+                {
+                    id: 4,
+                    name: 'Grace Wanjiku',
+                    role: 'Post-Production Supervisor',
+                    image: 'https://via.placeholder.com/300x300.png?text=Grace+Wanjiku',
+                    bio: 'Grace transforms raw footage into cinematic masterpieces. Her expertise in editing, motion graphics, and sound design ensures every project exceeds client expectations and industry standards.',
+                    expertise: ['Video Editing', 'Motion Graphics', 'Sound Design'],
+                    linkedin: 'https://linkedin.com/in/gracewanjiku',
+                    achievements: ['Award-winning editor', 'Technical excellence', 'Creative problem solver']
+                }
+            ];
+            
+            const companyValues = [
+                {
+                    icon: '🎬',
+                    title: 'Cinematic Excellence',
+                    description: 'We never compromise on quality. Every project receives the same level of attention and craftsmanship, regardless of budget.'
+                },
+                {
+                    icon: '🤝',
+                    title: 'Client Partnership',
+                    description: 'We don\'t just create videos; we build long-term partnerships that drive sustained business growth for our clients.'
+                },
+                {
+                    icon: '🇰🇪',
+                    title: 'Kenyan Pride',
+                    description: 'We\'re proud to showcase Kenya\'s talent and stories while helping local businesses compete on the global stage.'
+                },
+                {
+                    icon: '💡',
+                    title: 'Innovation First',
+                    description: 'We stay ahead of industry trends and technology to deliver cutting-edge solutions that set our clients apart.'
+                }
+            ];
+            
+            const milestones = [
+                {
+                    year: '2020',
+                    title: 'Company Founded',
+                    description: 'Cinematic was born from a vision to bring world-class video production to Kenyan businesses.',
+                    icon: '🚀'
+                },
+                {
+                    year: '2021',
+                    title: 'First Major Campaign',
+                    description: 'Launched our breakthrough campaign for a leading Kenyan bank, achieving 300% engagement increase.',
+                    icon: '📈'
+                },
+                {
+                    year: '2022',
+                    title: 'Industry Recognition',
+                    description: 'Won "Best Video Marketing Campaign" at the Kenyan Digital Marketing Awards.',
+                    icon: '🏆'
+                },
+                {
+                    year: '2023',
+                    title: 'Reality Show Launch',
+                    description: 'Premiered our first branded reality show, reaching over 2 million viewers across East Africa.',
+                    icon: '📺'
+                },
+                {
+                    year: '2024',
+                    title: 'Continued Growth',
+                    description: 'Expanded our team and capabilities, now serving 50+ clients with world-class video content.',
+                    icon: '🌟'
+                }
+            ];
+            
+            return (
+                <div className="min-h-screen">
+                    {/* Hero Section */}
+                    <section className="relative h-96 flex items-center justify-center overflow-hidden">
+                        <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-black via-gray-900 to-black">
+                            <img 
+                                src="https://via.placeholder.com/1920x400.png?text=About+Cinematic"
+                                alt="About Cinematic team and story"
+                                className="w-full h-full object-cover opacity-50"
+                                loading="lazy"
+                            />
+                        </div>
+                        
+                        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                            <h1 className="text-4xl md:text-6xl font-bold text-yellow-400 mb-6">
+                                About Cinematic
+                            </h1>
+                            <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+                                We're passionate storytellers, technical perfectionists, and business growth partners dedicated to elevating brands through cinematic video content.
+                            </p>
+                        </div>
+                    </section>
+                    
+                    {/* Mission Statement */}
+                    <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+                        <div className="max-w-4xl mx-auto text-center">
+                            <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-8 lazy-load">
+                                Our Mission
+                            </h2>
+                            <blockquote className="text-2xl md:text-3xl text-white leading-relaxed mb-8 italic lazy-load">
+                                "Crafting cinematic videos that elevate brands"
+                            </blockquote>
+                            <p className="text-xl text-gray-300 leading-relaxed lazy-load">
+                                At Cinematic, we believe every business has a unique story worth telling. Our mission is to help Kenyan and international brands discover, refine, and share their stories through world-class video content that not only looks stunning but drives real business results. We combine Hollywood-level production quality with deep market insights to create content that resonates with audiences and achieves measurable ROI.
+                            </p>
+                        </div>
+                    </section>
+                    
+                    {/* Company Values */}
+                    <section className="py-20 px-4 bg-black">
+                        <div className="max-w-7xl mx-auto">
+                            <h2 className="text-4xl md:text-5xl font-bold text-center text-yellow-400 mb-16">
+                                Our Values
+                            </h2>
+                            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+                                {companyValues.map((value, index) => (
+                                    <div key={index} className="glow-gold bg-gray-900 p-8 rounded-lg text-center lazy-load">
+                                        <div className="text-5xl mb-4 value-icon">{value.icon}</div>
+                                        <h3 className="text-xl font-bold text-yellow-400 mb-4">{value.title}</h3>
+                                        <p className="text-gray-300 leading-relaxed">{value.description}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Team Section */}
+                    <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+                        <div className="max-w-7xl mx-auto">
+                            <div className="text-center mb-16">
+                                <h2 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6">
+                                    Meet Our Team
+                                </h2>
+                                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                                    Our diverse team of creatives, technicians, and strategists brings together decades of experience in film, marketing, and business development.
+                                </p>
+                            </div>
+                            
+                            <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+                                {teamMembers.map((member) => (
+                                    <div key={member.id} className="bg-gray-900 rounded-lg overflow-hidden team-card lazy-load">
+                                        <img 
+                                            src={member.image}
+                                            alt={`${member.name} - ${member.role}`}
+                                            className="w-full h-64 object-cover"
+                                            loading="lazy"
+                                        />
+                                        <div className="p-6">
+                                            <h3 className="text-xl font-bold text-yellow-400 mb-2">{member.name}</h3>
+                                            <p className="text-gray-400 mb-4">{member.role}</p>
+                                            <p className="text-gray-300 text-sm mb-4 leading-relaxed">{member.bio}</p>
+                                            
+                                            <div className="mb-4">
+                                                <h4 className="text-yellow-400 font-bold mb-2">Expertise:</h4>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {member.expertise.map((skill, index) => (
+                                                        <span key={index} className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs">
+                                                            {skill}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            
+                                            <div className="mb-4">
+                                                <h4 className="text-yellow-400 font-bold mb-2">Achievements:</h4>
+                                                <ul className="text-gray-300 text-xs space-y-1">
+                                                    {member.achievements.map((achievement, index) => (
+                                                        <li key={index} className="flex items-center">
+                                                            <span className="text-yellow-400 mr-2">•</span>
+                                                            {achievement}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                            
+                                            <a 
+                                                href={member.linkedin}
+                                                className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors focus"
+                                                aria-label={`View ${member.name}'s LinkedIn profile`}
+                                            >
+                                                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                                </svg>
+                                                LinkedIn
+                                            </a>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Company History Timeline */}
+                    <section className="py-20 px-4 bg-black">
+                        <div className="max-w-4xl mx-auto">
+                            <h2 className="text-4xl md:text-5xl font-bold text-center text-yellow-400 mb-16">
+                                Our Journey
+                            </h2>
+                            
+                            <div className="space-y-12">
+                                {milestones.map((milestone, index) => (
+                                    <div key={index} className={`flex items-center gap-8 lazy-load ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
+                                        <div className="flex-1">
+                                            <div className={`text-${index % 2 === 1 ? 'right' : 'left'}`}>
+                                                <div className="flex items-center gap-3 mb-3">
+                                                    <span className="text-3xl">{milestone.icon}</span>
+                                                    <span className="text-2xl font-bold text-yellow-400">{milestone.year}</span>
+                                                </div>
+                                                <h3 className="text-xl font-bold text-white mb-3">{milestone.title}</h3>
+                                                <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div className="w-4 h-4 bg-yellow-400 rounded-full flex-shrink-0"></div>
+                                        
+                                        <div className="flex-1"></div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Stats Section */}
+                    <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+                        <div className="max-w-7xl mx-auto">
+                            <h2 className="text-4xl md:text-5xl font-bold text-center text-yellow-400 mb-16">
+                                By the Numbers
+                            </h2>
+                            <div className="grid md:grid-cols-4 gap-8 text-center">
+                                <div className="lazy-load">
+                                    <div className="text-5xl font-bold text-yellow-400 mb-2">4+</div>
+                                    <p className="text-gray-300">Years of Excellence</p>
+                                </div>
+                                <div className="lazy-load">
+                                    <div className="text-5xl font-bold text-yellow-400 mb-2">50+</div>
+                                    <p className="text-gray-300">Happy Clients</p>
+                                </div>
+                                <div className="lazy-load">
+                                    <div className="text-5xl font-bold text-yellow-400 mb-2">200+</div>
+                                    <p className="text-gray-300">Projects Completed</p>
+                                </div>
+                                <div className="lazy-load">
+                                    <div className="text-5xl font-bold text-yellow-400 mb-2">25M+</div>
+                                    <p className="text-gray-300">Total Video Views</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Awards & Recognition */}
+                    <section className="py-20 px-4 bg-black">
+                        <div className="max-w-7xl mx-auto">
+                            <h2 className="text-4xl md:text-5xl font-bold text-center text-yellow-400 mb-16">
+                                Awards & Recognition
+                            </h2>
+                            <div className="grid md:grid-cols-3 gap-8">
+                                <div className="glow-gold bg-gray-900 p-8 rounded-lg text-center lazy-load">
+                                    <div className="text-yellow-400 text-5xl mb-4">🏆</div>
+                                    <h3 className="text-xl font-bold text-yellow-400 mb-3">Best Video Marketing Campaign</h3>
+                                    <p className="text-gray-300 mb-2">Kenyan Digital Marketing Awards 2022</p>
+                                    <p className="text-gray-400 text-sm">For our innovative Safaricom campaign</p>
+                                </div>
+                                
+                                <div className="glow-gold bg-gray-900 p-8 rounded-lg text-center lazy-load">
+                                    <div className="text-yellow-400 text-5xl mb-4">🎬</div>
+                                    <h3 className="text-xl font-bold text-yellow-400 mb-3">Excellence in Cinematography</h3>
+                                    <p className="text-gray-300 mb-2">East Africa Film Festival 2023</p>
+                                    <p className="text-gray-400 text-sm">Recognition for technical and artistic excellence</p>
+                                </div>
+                                
+                                <div className="glow-gold bg-gray-900 p-8 rounded-lg text-center lazy-load">
+                                    <div className="text-yellow-400 text-5xl mb-4">🌟</div>
+                                    <h3 className="text-xl font-bold text-yellow-400 mb-3">Top Production Company</h3>
+                                    <p className="text-gray-300 mb-2">Business Daily Top 100 2023</p>
+                                    <p className="text-gray-400 text-sm">Ranked among Kenya's leading creative agencies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Client Testimonials */}
+                    <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+                        <div className="max-w-7xl mx-auto">
+                            <h2 className="text-4xl md:text-5xl font-bold text-center text-yellow-400 mb-16">
+                                What Our Clients Say
+                            </h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div className="glow-gold bg-gray-900 p-8 rounded-lg lazy-load">
+                                    <p className="text-gray-300 text-lg mb-6 italic leading-relaxed">
+                                        "Working with Cinematic transformed how we approach marketing. Their team doesn't just create videos; they craft experiences that connect with our audience on an emotional level. The ROI speaks for itself - we've seen a 250% increase in engagement since partnering with them."
+                                    </p>
+                                    <div className="flex items-center">
+                                        <img 
+                                            src="https://via.placeholder.com/60?text=CM"
+                                            alt="Catherine Muiru profile"
+                                            className="w-12 h-12 rounded-full mr-4"
+                                            loading="lazy"
+                                        />
+                                        <div>
+                                            <p className="text-yellow-400 font-bold">Catherine Muiru</p>
+                                            <p className="text-gray-400">Marketing Director, East Africa Beverages</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="glow-gold bg-gray-900 p-8 rounded-lg lazy-load">
+                                    <p className="text-gray-300 text-lg mb-6 italic leading-relaxed">
+                                        "The professionalism and creativity of the Cinematic team is unmatched. They understood our brand vision immediately and delivered content that exceeded our expectations. Our reality show partnership generated over 5 million views and positioned us as industry leaders."
+                                    </p>
+                                    <div className="flex items-center">
+                                        <img 
+                                            src="https://via.placeholder.com/60?text=JO"
+                                            alt="James Omondi profile"
+                                            className="w-12 h-12 rounded-full mr-4"
+                                            loading="lazy"
+                                        />
+                                        <div>
+                                            <p className="text-yellow-400 font-bold">James Omondi</p>
+                                            <p className="text-gray-400">CEO, Innovate Kenya Ltd</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    {/* Call to Action */}
+                    <section className="py-20 px-4 bg-gradient-to-r from-yellow-400 to-yellow-600">
+                        <div className="max-w-4xl mx-auto text-center">
+                            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+                                Let's Create Together
+                            </h2>
+                            <p className="text-xl text-black mb-8 opacity-90">
+                                Ready to join our growing family of successful clients? Let's discuss how we can elevate your brand through the power of cinematic storytelling.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                                <button 
+                                    onClick={() => navigate('/contact')}
+                                    className="bg-black text-yellow-400 px-8 py-4 text-xl font-bold rounded-lg hover:bg-gray-900 transition-all duration-300 glow-gold focus"
+                                >
+                                    Start Your Project
+                                </button>
+                                <button 
+                                    onClick={() => navigate('/portfolio')}
+                                    className="border-2 border-black text-black px-8 py-4 text-xl font-bold rounded-lg hover:bg-black hover:text-yellow-400 transition-all duration-300 focus"
+                                >
+                                    View Our Work
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            );
+        };
+        
+        // Footer Component
+        const Footer = () => {
+            const [email, setEmail] = useState('');
+            
+            const handleNewsletterSubmit = (e) => {
+                e.preventDefault();
+                if (email) {
+                    alert('Thank you for subscribing! You\'ll receive updates about our latest projects and industry insights.');
+                    setEmail('');
+                }
+            };
+            
+            return (
+                <footer className="bg-black border-t border-yellow-400 py-12 px-4">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="grid md:grid-cols-4 gap-8 mb-8">
+                            <div>
+                                <h3 className="text-2xl font-bold text-yellow-400 mb-4">Cinematic</h3>
+                                <p className="text-gray-300 mb-4">
+                                    Kenya's premier video production agency crafting cinematic content that elevates brands.
+                                </p>
+                                <div className="flex space-x-4">
+                                    <a href="https://twitter.com/cinematic" className="text-yellow-400 hover:text-yellow-300 focus" aria-label="Follow us on Twitter">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                                    </a>
+                                    <a href="https://instagram.com/cinematic" className="text-yellow-400 hover:text-yellow-300 focus" aria-label="Follow us on Instagram">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.004 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.329-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.412-3.329c.881-.881 2.032-1.297 3.329-1.297s2.448.416 3.329 1.297c.881.881 1.297 2.032 1.297 3.329s-.416 2.448-1.297 3.329c-.881.881-2.032 1.297-3.329 1.297zm7.718-6.541c0-.784-.245-1.47-.735-2.058-.49-.588-1.176-.833-1.96-.833-.784 0-1.47.245-2.058.833-.588.588-.833 1.274-.833 2.058 0 .784.245 1.47.833 2.058.588.588 1.274.833 2.058.833.784 0 1.47-.245 1.96-.833.49-.588.735-1.274.735-2.058z"/></svg>
+                                    </a>
+                                    <a href="https://youtube.com/cinematic" className="text-yellow-400 hover:text-yellow-300 focus" aria-label="Subscribe to our YouTube channel">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                    </a>
+                                    <a href="https://tiktok.com/@cinematic" className="text-yellow-400 hover:text-yellow-300 focus" aria-label="Follow us on TikTok">
+                                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 className="text-lg font-bold text-yellow-400 mb-4">Services</h4>
+                                <ul className="text-gray-300 space-y-2">
+                                    <li><Link to="/services" className="hover:text-yellow-400 transition-colors focus">Cinematic Video Ads</Link></li>
+                                    <li><Link to="/services" className="hover:text-yellow-400 transition-colors focus">Business Mini-Movies</Link></li>
+                                    <li><Link to="/services" className="hover:text-yellow-400 transition-colors focus">Branded Reality Shows</Link></li>
+                                    <li><Link to="/services" className="hover:text-yellow-400 transition-colors focus">Day-in-the-Life Videos</Link></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 className="text-lg font-bold text-yellow-400 mb-4">Company</h4>
+                                <ul className="text-gray-300 space-y-2">
+                                    <li><Link to="/about" className="hover:text-yellow-400 transition-colors focus">About Us</Link></li>
+                                    <li><Link to="/portfolio" className="hover:text-yellow-400 transition-colors focus">Portfolio</Link></li>
+                                    <li><Link to="/content-hub" className="hover:text-yellow-400 transition-colors focus">Content Hub</Link></li>
+                                    <li><Link to="/contact" className="hover:text-yellow-400 transition-colors focus">Contact</Link></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 className="text-lg font-bold text-yellow-400 mb-4">Newsletter</h4>
+                                <p className="text-gray-300 mb-4">Stay updated with our latest projects and industry insights.</p>
+                                <form onSubmit={handleNewsletterSubmit} className="space-y-3">
+                                    <input
+                                        type="email"
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        placeholder="Enter your email"
+                                        className="w-full px-3 py-2 bg-gray-800 text-white border border-gray-600 rounded focus:border-yellow-400 focus:outline-none focus"
+                                        required
+                                        aria-label="Email address for newsletter"
+                                    />
+                                    <button 
+                                        type="submit"
+                                        className="w-full bg-yellow-400 text-black py-2 px-4 rounded font-bold hover:bg-yellow-300 transition-colors focus"
+                                    >
+                                        Subscribe
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        <div className="border-t border-gray-800 pt-8 text-center">
+                            <p className="text-gray-400">
+                                © 2024 Cinematic Kenya. All rights reserved. | 
+                                <span className="ml-1">Crafting cinematic videos that elevate brands.</span>
+                            </p>
+                            <p className="text-gray-500 text-sm mt-2">
+                                Westlands, Nairobi | +254 700 123 456 | contact@cinematic.co.ke
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+            );
+        };
+        
+        // Main App Component
+        const App = () => {
+            return (
+                <BrowserRouter>
+                    <div className="min-h-screen bg-black text-white">
+                        <Navigation />
+                        <main className="pt-16">
+                            <Routes>
+                                <Route path="/" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">Homepage</h1></div>} />
+                                <Route path="/services" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">Services Page</h1></div>} />
+                                <Route path="/portfolio" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">Portfolio Page</h1></div>} />
+                                <Route path="/content-hub" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">Content Hub</h1></div>} />
+                                <Route path="/contact" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-yellow-400">Contact Page</h1></div>} />
+                                <Route path="/about" element={<AboutPage />} />
+                            </Routes>
+                        </main>
+                        <Footer />
+                    </div>
+                </BrowserRouter>
+            );
+        };
+        
+        // Render the app
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html> 
