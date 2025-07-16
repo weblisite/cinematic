@@ -488,339 +488,148 @@ const Home = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Technology */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-cinematic-gold text-4xl mb-4">💻</div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Technology</h3>
-              <p className="text-gray-300 mb-4">Challenge: Making complex tech solutions accessible and building trust</p>
-              <p className="text-gray-400 text-sm mb-4">How our services transform tech companies: From SaaS demos to startup journeys, we create content that drives user adoption and investment.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Product launch campaigns that showcase software benefits cinematically</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Developers and engineers showing real problem-solving in action</li>
-                <li>• <strong>Business Mini-Movies:</strong> Startup founding stories and tech innovation journeys</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following tech teams through product development cycles</li>
-                <li>• <strong>Branded Competitions:</strong> Coding challenges and hackathons with your tech as the centerpiece</li>
-                <li>• <strong>Business Reality Shows:</strong> Behind-the-scenes of successful tech companies and their operations</li>
-              </ul>
+              <p className="text-gray-300 mb-4">Making complex tech solutions accessible and building trust through compelling video content.</p>
+              <p className="text-gray-400 text-sm mb-6">From SaaS demos to startup journeys, we create content that drives user adoption and investment.</p>
+              <button 
+                onClick={() => navigate('/industries/technology')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
 
             {/* Healthcare */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-cinematic-gold text-4xl mb-4">🏥</div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Healthcare</h3>
-              <p className="text-gray-300 mb-4">Challenge: Building patient trust and showcasing medical excellence</p>
-              <p className="text-gray-400 text-sm mb-4">How our services elevate healthcare providers: From patient testimonials to facility showcases, we humanize medical care and build confidence.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Medical procedure explanations and patient success stories</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Doctors, nurses, and specialists showcasing their dedication and expertise</li>
-                <li>• <strong>Business Mini-Movies:</strong> Hospital transformation stories and medical breakthrough narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following medical teams through critical cases and patient care</li>
-                <li>• <strong>Branded Competitions:</strong> Medical innovation challenges and healthcare excellence awards</li>
-                <li>• <strong>Business Reality Shows:</strong> Hospital operations, management decisions, and healthcare delivery systems</li>
-              </ul>
+              <p className="text-gray-300 mb-4">Building patient trust and showcasing medical excellence through humanized healthcare content.</p>
+              <p className="text-gray-400 text-sm mb-6">From patient testimonials to facility showcases, we humanize medical care and build confidence.</p>
+              <button 
+                onClick={() => navigate('/industries/healthcare')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
 
-            {/* Finance */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
+            {/* Financial Services */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-cinematic-gold text-4xl mb-4">🏦</div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Financial Services</h3>
-              <p className="text-gray-300 mb-4">Challenge: Building trust and simplifying complex financial concepts</p>
-              <p className="text-gray-400 text-sm mb-4">How our services transform financial institutions: From investment success stories to banking operations, we make finance relatable and trustworthy.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Investment products, loans, and financial services that build confidence</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Financial advisors, bankers, and investment professionals in action</li>
-                <li>• <strong>Business Mini-Movies:</strong> Client wealth-building journeys and financial transformation stories</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following financial advisors helping clients achieve their goals</li>
-                <li>• <strong>Branded Competitions:</strong> Financial literacy challenges and investment strategy contests</li>
-                <li>• <strong>Business Reality Shows:</strong> Bank operations, investment decisions, and financial institution management</li>
-              </ul>
+              <p className="text-gray-300 mb-4">Building trust and simplifying complex financial concepts through relatable storytelling.</p>
+              <p className="text-gray-400 text-sm mb-6">From investment success stories to banking operations, we make finance relatable and trustworthy.</p>
+              <button 
+                onClick={() => navigate('/industries/financial-services')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
 
-            {/* Retail */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
+            {/* Retail & E-commerce */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-cinematic-gold text-4xl mb-4">🛍️</div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Retail & E-commerce</h3>
-              <p className="text-gray-300 mb-4">Challenge: Creating compelling product stories that drive sales in competitive markets</p>
-              <p className="text-gray-400 text-sm mb-4">How our services boost retail businesses: From product launches to customer experiences, we create content that converts browsers into buyers.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Product showcases that highlight features, benefits, and lifestyle appeal</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Store managers, buyers, and customer service teams in action</li>
-                <li>• <strong>Business Mini-Movies:</strong> Brand founding stories and product development journeys</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following retail teams through seasonal campaigns and store operations</li>
-                <li>• <strong>Branded Competitions:</strong> Customer styling challenges and product design contests</li>
-                <li>• <strong>Business Reality Shows:</strong> Retail chain management, inventory decisions, and customer experience optimization</li>
-              </ul>
+              <p className="text-gray-300 mb-4">Creating compelling product stories that drive sales in competitive markets.</p>
+              <p className="text-gray-400 text-sm mb-6">From product launches to customer experiences, we create content that converts browsers into buyers.</p>
+              <button 
+                onClick={() => navigate('/industries/retail-ecommerce')}
+                className="btn-primary w-full text-sm py-2"
+              >
+                Learn More
+              </button>
             </div>
 
             {/* Manufacturing */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-cinematic-gold text-4xl mb-4">🏭</div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Manufacturing</h3>
-              <p className="text-gray-300 mb-4">Challenge: Demonstrating quality, safety, and innovation in production processes</p>
-              <p className="text-gray-400 text-sm mb-4">How our services showcase manufacturing excellence: From production line efficiency to worker expertise, we build trust in your manufacturing capabilities.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Quality control processes and finished product superiority</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Factory workers, engineers, and quality assurance teams at work</li>
-                <li>• <strong>Business Mini-Movies:</strong> Company growth stories and innovation breakthroughs</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following production teams through complex manufacturing challenges</li>
-                <li>• <strong>Branded Competitions:</strong> Innovation challenges and efficiency improvement contests</li>
-                <li>• <strong>Business Reality Shows:</strong> Factory operations, supply chain management, and production optimization</li>
-              </ul>
+              <p className="text-gray-300 mb-4">Demonstrating quality, safety, and innovation in production processes.</p>
+              <p className="text-gray-400 text-sm mb-6">From production line efficiency to worker expertise, we build trust in your manufacturing capabilities.</p>
+              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
+                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
+              </div>
             </div>
 
-            {/* Hospitality */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
+            {/* Hospitality & Tourism */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-cinematic-gold text-4xl mb-4">🏨</div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Hospitality & Tourism</h3>
-              <p className="text-gray-300 mb-4">Challenge: Creating compelling destination experiences that drive bookings</p>
-              <p className="text-gray-400 text-sm mb-4">How our services elevate hospitality businesses: From luxury hotel showcases to authentic travel experiences, we inspire wanderlust and drive reservations.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Destination marketing and hotel luxury experience showcases</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Hotel staff, tour guides, and hospitality professionals creating exceptional experiences</li>
-                <li>• <strong>Business Mini-Movies:</strong> Destination development stories and cultural heritage narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following hospitality teams through peak season operations and guest experiences</li>
-                <li>• <strong>Branded Competitions:</strong> Chef competitions, hospitality excellence awards, and cultural showcases</li>
-                <li>• <strong>Business Reality Shows:</strong> Hotel management, resort operations, and tourism industry development</li>
-              </ul>
+              <p className="text-gray-300 mb-4">Creating compelling destination experiences that drive bookings.</p>
+              <p className="text-gray-400 text-sm mb-6">From luxury hotel showcases to authentic travel experiences, we inspire wanderlust and drive reservations.</p>
+              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
+                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
+              </div>
             </div>
 
-            {/* Real Estate */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
+            {/* Real Estate & Property */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-cinematic-gold text-4xl mb-4">🏡</div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Real Estate & Property</h3>
-              <p className="text-gray-300 mb-4">Challenge: Making properties irresistible and building agent credibility</p>
-              <p className="text-gray-400 text-sm mb-4">How our services transform real estate marketing: From luxury property showcases to agent success stories, we help sell properties faster and build reputations.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Luxury property tours highlighting lifestyle and investment potential</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Top-performing agents showing their expertise and client service</li>
-                <li>• <strong>Business Mini-Movies:</strong> Property development stories and community transformation narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following real estate teams through high-stakes property deals and client relationships</li>
-                <li>• <strong>Branded Competitions:</strong> Property styling challenges and real estate excellence awards</li>
-                <li>• <strong>Business Reality Shows:</strong> Real estate agency operations, market analysis, and investment decisions</li>
-              </ul>
+              <p className="text-gray-300 mb-4">Making properties irresistible and building agent credibility.</p>
+              <p className="text-gray-400 text-sm mb-6">From luxury property showcases to agent success stories, we help sell properties faster and build reputations.</p>
+              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
+                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
+              </div>
             </div>
 
-            {/* Education */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
+            {/* Education & Training */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-cinematic-gold text-4xl mb-4">🎓</div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Education & Training</h3>
-              <p className="text-gray-300 mb-4">Challenge: Attracting students and showcasing educational outcomes</p>
-              <p className="text-gray-400 text-sm mb-4">How our services elevate educational institutions: From student success stories to campus culture, we help institutions attract the right students and build reputation.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Program highlights showcasing career outcomes and learning experiences</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Teachers, students, and administrators demonstrating educational excellence</li>
-                <li>• <strong>Business Mini-Movies:</strong> Alumni success stories and institutional transformation narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following students through challenging academic programs and real-world applications</li>
-                <li>• <strong>Branded Competitions:</strong> Academic competitions, innovation challenges, and student showcase events</li>
-                <li>• <strong>Business Reality Shows:</strong> School administration, curriculum development, and educational innovation</li>
-              </ul>
+              <p className="text-gray-300 mb-4">Attracting students and showcasing educational outcomes.</p>
+              <p className="text-gray-400 text-sm mb-6">From student success stories to campus culture, we help institutions attract the right students and build reputation.</p>
+              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
+                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
+              </div>
             </div>
 
-            {/* Agriculture */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
+            {/* Agriculture & Food */}
+            <div className="bg-cinematic-gray p-6 rounded-lg glow-gold lazy-load hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-cinematic-gold text-4xl mb-4">🌾</div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Agriculture & Food</h3>
-              <p className="text-gray-300 mb-4">Challenge: Building consumer trust and showcasing sustainable farming practices</p>
-              <p className="text-gray-400 text-sm mb-4">How our services strengthen agricultural businesses: From farm-to-table narratives to sustainable practice showcases, we connect consumers with quality food sources.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Farm-to-table journeys highlighting quality, sustainability, and freshness</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Farmers, agricultural experts, and food processors demonstrating their craft</li>
-                <li>• <strong>Business Mini-Movies:</strong> Agricultural innovation stories and family farm legacy narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following agricultural teams through seasonal challenges and harvest cycles</li>
-                <li>• <strong>Branded Competitions:</strong> Best produce contests, sustainable farming awards, and culinary challenges</li>
-                <li>• <strong>Business Reality Shows:</strong> Agricultural business operations, supply chain management, and food distribution</li>
-              </ul>
+              <p className="text-gray-300 mb-4">Building consumer trust and showcasing sustainable farming practices.</p>
+              <p className="text-gray-400 text-sm mb-6">From farm-to-table narratives to sustainable practice showcases, we connect consumers with quality food sources.</p>
+              <div className="bg-cinematic-black/50 px-4 py-2 rounded text-center">
+                <span className="text-cinematic-gold text-sm font-semibold">Coming Soon</span>
+              </div>
             </div>
 
-            {/* Legal Services */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">⚖️</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Legal & Professional Services</h3>
-              <p className="text-gray-300 mb-4">Challenge: Humanizing legal services and building client trust</p>
-              <p className="text-gray-400 text-sm mb-4">How our services enhance legal practice marketing: From client success stories to professional expertise showcases, we make legal services accessible and trustworthy.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Legal service explanations and client testimonial stories</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Lawyers, paralegals, and support staff demonstrating their dedication</li>
-                <li>• <strong>Business Mini-Movies:</strong> Landmark case victories and firm founding stories</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following legal teams through complex cases and client relationships</li>
-                <li>• <strong>Branded Competitions:</strong> Legal knowledge competitions and professional excellence awards</li>
-                <li>• <strong>Business Reality Shows:</strong> Law firm operations, case strategy development, and legal industry insights</li>
-              </ul>
-            </div>
-
-            {/* Automotive */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">🚗</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Automotive</h3>
-              <p className="text-gray-300 mb-4">Challenge: Creating emotional connections with vehicles and building brand loyalty</p>
-              <p className="text-gray-400 text-sm mb-4">How our services accelerate automotive marketing: From performance showcases to lifestyle integration, we make vehicles irresistible and build lasting brand connections.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Vehicle performance, luxury features, and lifestyle integration showcases</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Automotive engineers, designers, and sales professionals at work</li>
-                <li>• <strong>Business Mini-Movies:</strong> Brand heritage stories and automotive innovation journeys</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following automotive teams through vehicle development and racing challenges</li>
-                <li>• <strong>Branded Competitions:</strong> Car shows, racing events, and automotive excellence competitions</li>
-                <li>• <strong>Business Reality Shows:</strong> Dealership operations, automotive industry trends, and customer experience innovation</li>
-              </ul>
-            </div>
-
-            {/* Media & Entertainment */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">🎭</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Media & Entertainment</h3>
-              <p className="text-gray-300 mb-4">Challenge: Building audience engagement and showcasing artistic talent</p>
-              <p className="text-gray-400 text-sm mb-4">How our services amplify entertainment businesses: From artist showcases to behind-the-scenes content, we create compelling narratives that build fan bases and drive bookings.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Artist promotional content and event marketing showcases</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Musicians, actors, producers, and entertainment professionals in their creative process</li>
-                <li>• <strong>Business Mini-Movies:</strong> Artistic journey stories and entertainment company success narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following entertainment teams through production processes and creative challenges</li>
-                <li>• <strong>Branded Competitions:</strong> Talent competitions, creative challenges, and entertainment industry showcases</li>
-                <li>• <strong>Business Reality Shows:</strong> Entertainment industry operations, artist management, and creative business development</li>
-              </ul>
-            </div>
-
-            {/* Non-Profit & NGOs */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">🤝</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Non-Profit & NGOs</h3>
-              <p className="text-gray-300 mb-4">Challenge: Demonstrating impact and inspiring sustainable funding</p>
-              <p className="text-gray-400 text-sm mb-4">How our services amplify social impact: From community transformation stories to donor engagement content, we help organizations secure funding and expand their reach.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Fundraising campaigns and program impact showcases</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Field workers, volunteers, and beneficiaries showing real community impact</li>
-                <li>• <strong>Business Mini-Movies:</strong> Organizational founding stories and community transformation narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following NGO teams through community development projects and challenges</li>
-                <li>• <strong>Branded Competitions:</strong> Community development challenges and social impact innovations</li>
-                <li>• <strong>Business Reality Shows:</strong> NGO operations, funding decisions, and program development strategies</li>
-              </ul>
-            </div>
-
-            {/* Fashion & Beauty */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">💄</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Fashion & Beauty</h3>
-              <p className="text-gray-300 mb-4">Challenge: Creating aspirational brand appeal and driving purchase desire</p>
-              <p className="text-gray-400 text-sm mb-4">How our services elevate fashion brands: From runway showcases to beauty transformations, we create content that inspires style choices and drives brand loyalty.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Fashion collections and beauty product showcases with artistic flair</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Designers, stylists, makeup artists, and fashion professionals in their creative process</li>
-                <li>• <strong>Business Mini-Movies:</strong> Brand founding stories and fashion industry success narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following fashion teams through collection development and fashion shows</li>
-                <li>• <strong>Branded Competitions:</strong> Style competitions, beauty challenges, and fashion design contests</li>
-                <li>• <strong>Business Reality Shows:</strong> Fashion house operations, trend forecasting, and brand development strategies</li>
-              </ul>
-            </div>
-
-            {/* Sports & Fitness */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">🏋️</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Sports & Fitness</h3>
-              <p className="text-gray-300 mb-4">Challenge: Inspiring fitness journeys and building athletic credibility</p>
-              <p className="text-gray-400 text-sm mb-4">How our services energize sports businesses: From transformation stories to athletic showcases, we create motivational content that drives membership and builds athletic brands.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Fitness facility showcases and athletic performance highlights</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Athletes, trainers, coaches, and fitness professionals demonstrating expertise</li>
-                <li>• <strong>Business Mini-Movies:</strong> Athletic achievement stories and fitness transformation narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following athletes through training regimens and competitive challenges</li>
-                <li>• <strong>Branded Competitions:</strong> Fitness challenges, athletic competitions, and sports excellence showcases</li>
-                <li>• <strong>Business Reality Shows:</strong> Sports facility operations, team management, and athletic program development</li>
-              </ul>
-            </div>
-
-            {/* Furniture & Home Décor */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">🪑</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Furniture & Home Décor</h3>
-              <p className="text-gray-300 mb-4">Challenge: Showcasing craftsmanship and inspiring home transformation</p>
-              <p className="text-gray-400 text-sm mb-4">How our services elevate furniture businesses: From artisan craftsmanship to home makeovers, we create content that drives furniture sales and builds brand reputation.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Furniture collections and home transformation showcases</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Craftsmen, designers, and furniture makers demonstrating their skills</li>
-                <li>• <strong>Business Mini-Movies:</strong> Artisan stories and furniture business success narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following furniture teams through design processes and custom projects</li>
-                <li>• <strong>Branded Competitions:</strong> Home makeover challenges and furniture design contests</li>
-                <li>• <strong>Business Reality Shows:</strong> Furniture showroom operations, design trends, and manufacturing processes</li>
-              </ul>
-            </div>
-
-            {/* Household Goods */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">🏠</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Household Goods & Appliances</h3>
-              <p className="text-gray-300 mb-4">Challenge: Demonstrating product value and building consumer trust</p>
-              <p className="text-gray-400 text-sm mb-4">How our services boost household goods brands: From product demonstrations to family lifestyle integration, we create content that drives purchases and builds brand loyalty.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Product functionality and family lifestyle integration showcases</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Families using household products in real daily situations</li>
-                <li>• <strong>Business Mini-Movies:</strong> Brand innovation stories and customer satisfaction narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following families through home improvement and organization challenges</li>
-                <li>• <strong>Branded Competitions:</strong> Home organization challenges and household efficiency contests</li>
-                <li>• <strong>Business Reality Shows:</strong> Appliance retail operations, product development, and customer service excellence</li>
-              </ul>
-            </div>
-
-            {/* FMCG - Food & Daily Essentials */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">🛒</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">FMCG - Food & Daily Essentials</h3>
-              <p className="text-gray-300 mb-4">Challenge: Building brand preference in competitive everyday product markets</p>
-              <p className="text-gray-400 text-sm mb-4">How our services strengthen FMCG brands: From cooking demonstrations to family care stories, we create content that builds brand loyalty for flour, cooking oil, detergents, and soap.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Product quality demonstrations and family usage scenarios for flour, oil, detergents</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Families cooking with your flour/oil, mothers caring with your detergents/soap</li>
-                <li>• <strong>Business Mini-Movies:</strong> Brand heritage stories and quality assurance narratives for FMCG products</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following families through daily routines featuring your products naturally</li>
-                <li>• <strong>Branded Competitions:</strong> Cooking competitions with your flour/oil, cleaning challenges with detergents</li>
-                <li>• <strong>Business Reality Shows:</strong> FMCG production lines, quality control, and distribution operations</li>
-              </ul>
-            </div>
-
-            {/* Construction & Building Materials */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">🏗️</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Construction & Building Materials</h3>
-              <p className="text-gray-300 mb-4">Challenge: Demonstrating product durability and project success</p>
-              <p className="text-gray-400 text-sm mb-4">How our services build construction businesses: From project showcases to material quality demonstrations, we create content that builds contractor trust and drives sales.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Construction project showcases and material durability demonstrations</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Contractors, architects, and construction workers using quality materials</li>
-                <li>• <strong>Business Mini-Movies:</strong> Major project success stories and construction company growth narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following construction teams through complex building projects</li>
-                <li>• <strong>Branded Competitions:</strong> Construction excellence awards and building innovation challenges</li>
-                <li>• <strong>Business Reality Shows:</strong> Construction company operations, project management, and material sourcing</li>
-              </ul>
-            </div>
-
-            {/* Import/Export & Trading */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">🚢</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Import/Export & Trading</h3>
-              <p className="text-gray-300 mb-4">Challenge: Building trust in international trade relationships and logistics</p>
-              <p className="text-gray-400 text-sm mb-4">How our services expand trading businesses: From logistics showcases to international partnerships, we create content that builds trust and attracts new trading relationships.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Logistics capabilities and international trade success showcases</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Traders, logistics coordinators, and international business professionals at work</li>
-                <li>• <strong>Business Mini-Movies:</strong> International partnership stories and trade success narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following trading teams through complex international deals and logistics challenges</li>
-                <li>• <strong>Branded Competitions:</strong> Export excellence awards and trade innovation challenges</li>
-                <li>• <strong>Business Reality Shows:</strong> Trading company operations, international negotiations, and supply chain management</li>
-              </ul>
-            </div>
-
-            {/* Beauty & Cosmetics */}
-            <div className="bg-cinematic-gray p-8 rounded-lg glow-gold lazy-load">
-              <div className="text-cinematic-gold text-4xl mb-4">✨</div>
-              <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Beauty & Cosmetics</h3>
-              <p className="text-gray-300 mb-4">Challenge: Creating aspirational beauty content that drives product desire and brand loyalty</p>
-              <p className="text-gray-400 text-sm mb-4">How our services enhance beauty brands: From makeup tutorials to transformation stories, we create content that showcases lipstick, makeup, wigs, body lotions, perfumes, and the full range of beauty products.</p>
-              <ul className="text-gray-400 text-sm space-y-1">
-                <li>• <strong>Cinematic Video Ads:</strong> Luxury lipstick collections, makeup tutorials, wig styling showcases, and perfume lifestyle integration</li>
-                <li>• <strong>Day-in-Life Videos:</strong> Makeup artists, beauty consultants, and salon professionals demonstrating product expertise</li>
-                <li>• <strong>Business Mini-Movies:</strong> Beauty brand founding stories, product development journeys, and customer transformation narratives</li>
-                <li>• <strong>Branded Reality Shows:</strong> Following beauty teams through makeover challenges, salon operations, and customer transformations</li>
-                <li>• <strong>Branded Competitions:</strong> Makeup artistry contests, beauty transformation challenges, and product innovation showcases</li>
-                <li>• <strong>Business Reality Shows:</strong> Beauty salon operations, cosmetics retail management, and beauty industry trend forecasting</li>
-              </ul>
+            {/* More Industries - Compact Grid */}
+            <div className="lg:col-span-3">
+              <h4 className="text-xl font-bold text-cinematic-gold mb-6 text-center">Additional Industries We Serve</h4>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
+                  <div className="text-cinematic-gold text-2xl mb-2">⚖️</div>
+                  <h5 className="text-cinematic-gold font-semibold text-sm">Legal Services</h5>
+                </div>
+                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
+                  <div className="text-cinematic-gold text-2xl mb-2">🚗</div>
+                  <h5 className="text-cinematic-gold font-semibold text-sm">Automotive</h5>
+                </div>
+                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
+                  <div className="text-cinematic-gold text-2xl mb-2">🎭</div>
+                  <h5 className="text-cinematic-gold font-semibold text-sm">Entertainment</h5>
+                </div>
+                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
+                  <div className="text-cinematic-gold text-2xl mb-2">🤝</div>
+                  <h5 className="text-cinematic-gold font-semibold text-sm">Non-Profit</h5>
+                </div>
+                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
+                  <div className="text-cinematic-gold text-2xl mb-2">💄</div>
+                  <h5 className="text-cinematic-gold font-semibold text-sm">Fashion & Beauty</h5>
+                </div>
+                <div className="bg-cinematic-black/30 p-4 rounded-lg text-center">
+                  <div className="text-cinematic-gold text-2xl mb-2">🏋️</div>
+                  <h5 className="text-cinematic-gold font-semibold text-sm">Sports & Fitness</h5>
+                </div>
+              </div>
+              <p className="text-center text-gray-400 text-sm mt-4">
+                Don't see your industry? We create custom solutions for any business sector.
+              </p>
             </div>
           </div>
           
