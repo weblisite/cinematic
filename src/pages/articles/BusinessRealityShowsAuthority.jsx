@@ -45,7 +45,7 @@ const BusinessRealityShowsAuthority = () => {
             <h2 className="text-3xl font-bold text-cinematic-gold mb-6">What Are Business Reality Shows?</h2>
             
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              <strong className="text-cinematic-gold">Business reality shows</strong> are documentary-style productions that take viewers inside your company operations, decision-making processes, and industry expertise. Inspired by successful formats like Selling Sunset and Owning Manhattan, these shows position your business as an industry authority while entertaining audiences with authentic workplace dynamics.
+              <strong className="text-cinematic-gold">Business reality shows</strong> are documentary-style productions that take viewers inside your company operations, decision-making processes, and industry expertise. These shows showcase your business, team culture and all the drama, positioning your business as an industry authority while entertaining audiences with authentic workplace dynamics.
             </p>
             
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">

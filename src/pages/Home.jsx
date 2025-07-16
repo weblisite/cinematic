@@ -268,7 +268,7 @@ const Home = () => {
             </div>
             <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
               <h3 className="text-xl font-bold text-cinematic-gold mb-3">Business Reality Shows</h3>
-              <p className="text-gray-300 mb-4">Reality shows modeled after Netflix hits like Selling Sunset and Owning Manhattan - adapting their cinematic storytelling for your business.</p>
+                              <p className="text-gray-300 mb-4">Reality shows that showcase your business, team culture and all the drama.</p>
               <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 500,000</p>
               <button 
                 onClick={() => navigate('/services')}

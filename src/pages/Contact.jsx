@@ -21,13 +21,20 @@ const Contact = () => {
     setIsSubmitting(true)
     
     try {
+      // Encode form data properly for Netlify
+      const encode = (data) => {
+        return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&");
+      }
+
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
+        body: encode({
           'form-name': 'contact',
           ...formData
-        }).toString()
+        })
       })
 
       if (response.ok) {
@@ -61,6 +68,33 @@ const Contact = () => {
   return (
     <div className="min-h-screen py-20 px-4">
       <div className="max-w-7xl mx-auto">
+        {/* Hidden form for Netlify detection */}
+        <form 
+          name="contact" 
+          method="POST" 
+          data-netlify="true" 
+          data-netlify-honeypot="bot-field"
+          style={{display: 'none'}}
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <input type="tel" name="phone" />
+          <input type="text" name="company" />
+          <select name="service">
+            <option value="sponsored-content">Sponsored Content Integration</option>
+            <option value="cinematic-ads">Cinematic Video Ads</option>
+            <option value="day-in-life">Day in the Life Videos</option>
+            <option value="mini-movies">Business Mini-Movies</option>
+            <option value="business-reality">Business Reality Shows</option>
+            <option value="branded-competitions">Branded Competitions</option>
+            <option value="branded-reality">Branded Reality Shows</option>
+            <option value="other">Other / Custom Quote</option>
+          </select>
+          <textarea name="message"></textarea>
+        </form>
+
         <h1 className="text-4xl md:text-6xl font-bold text-center text-cinematic-gold mb-8">
           Contact Us
         </h1>
@@ -84,10 +118,6 @@ const Contact = () => {
             )}
             
             <form 
-              name="contact" 
-              method="POST" 
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit} 
               className="space-y-6"
             >
