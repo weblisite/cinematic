@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -46,7 +47,7 @@ const About = () => {
         </section>
         
         {/* Company Stats */}
-        <section className="grid md:grid-cols-4 gap-8 text-center">
+        <section className="grid md:grid-cols-4 gap-8 text-center mb-20">
           <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
             <div className="text-3xl font-bold text-cinematic-gold mb-2">150+</div>
             <div className="text-gray-300">Projects Completed</div>
@@ -62,6 +63,48 @@ const About = () => {
           <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
             <div className="text-3xl font-bold text-cinematic-gold mb-2">10M+</div>
             <div className="text-gray-300">Views Generated</div>
+          </div>
+        </section>
+        
+        {/* Call to Action Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-cinematic-gold to-yellow-600 rounded-lg">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-cinematic-black mb-6">
+              Ready to Work with Kenya's Premier Video Production Team?
+            </h2>
+            <p className="text-xl text-cinematic-black mb-8 opacity-90 leading-relaxed">
+              Join our growing family of successful clients and discover how our cinematic storytelling approach can transform your brand's presence and drive real business results.
+            </p>
+            
+            <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
+              <Link 
+                to="/contact"
+                className="bg-cinematic-black text-cinematic-gold px-8 py-4 text-xl font-bold rounded-lg hover:bg-cinematic-gray transition-all duration-300 glow-gold"
+              >
+                Start Your Project Today
+              </Link>
+              <Link 
+                to="/portfolio"
+                className="border-2 border-cinematic-black text-cinematic-black px-8 py-4 text-xl font-bold rounded-lg hover:bg-cinematic-black hover:text-cinematic-gold transition-all duration-300"
+              >
+                View Our Portfolio
+              </Link>
+            </div>
+            
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-cinematic-black opacity-80">
+              <div className="flex items-center gap-2">
+                <span className="text-cinematic-black">✓</span>
+                <span>Free Strategy Consultation</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-cinematic-black">✓</span>
+                <span>Custom Quote Within 24 Hours</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-cinematic-black">✓</span>
+                <span>100% Satisfaction Guarantee</span>
+              </div>
+            </div>
           </div>
         </section>
       </div>

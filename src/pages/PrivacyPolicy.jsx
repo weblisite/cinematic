@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const PrivacyPolicy = () => {
   return (
@@ -111,6 +112,19 @@ const PrivacyPolicy = () => {
             </div>
           </div>
         </section>
+
+        {/* Subtle CTA */}
+        <div className="text-center py-12 border-t border-cinematic-gold/20">
+          <p className="text-gray-300 mb-4">
+            Ready to work with a video production company that values your privacy?
+          </p>
+          <Link 
+            to="/contact"
+            className="inline-block bg-cinematic-gold text-cinematic-black px-6 py-3 rounded-lg font-bold text-sm hover:bg-cinematic-gold/80 transition-colors"
+          >
+            Get Your Free Quote
+          </Link>
+        </div>
 
         {/* Last Updated */}
         <div className="text-center text-gray-400 text-sm">

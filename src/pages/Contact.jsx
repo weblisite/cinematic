@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 const Contact = () => {
@@ -66,6 +67,42 @@ const Contact = () => {
         <p className="text-xl text-center text-gray-300 mb-16">
           Ready to create something cinematic? Let's talk!
         </p>
+        
+        {/* Quick Actions Section */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="bg-cinematic-gray p-6 rounded-lg text-center glow-gold">
+            <h3 className="text-xl font-bold text-cinematic-gold mb-3">Need Quick Answers?</h3>
+            <p className="text-gray-300 text-sm mb-4">Check out our pricing guide and service details</p>
+            <Link 
+              to="/services"
+              className="inline-block bg-cinematic-gold text-cinematic-black px-6 py-2 rounded-lg font-bold text-sm hover:bg-cinematic-gold/80 transition-colors"
+            >
+              View Services & Pricing
+            </Link>
+          </div>
+          
+          <div className="bg-cinematic-gray p-6 rounded-lg text-center glow-gold">
+            <h3 className="text-xl font-bold text-cinematic-gold mb-3">See Our Work</h3>
+            <p className="text-gray-300 text-sm mb-4">Browse our portfolio of successful projects</p>
+            <Link 
+              to="/portfolio"
+              className="inline-block bg-cinematic-gold text-cinematic-black px-6 py-2 rounded-lg font-bold text-sm hover:bg-cinematic-gold/80 transition-colors"
+            >
+              View Portfolio
+            </Link>
+          </div>
+          
+          <div className="bg-cinematic-gray p-6 rounded-lg text-center glow-gold">
+            <h3 className="text-xl font-bold text-cinematic-gold mb-3">Call Us Directly</h3>
+            <p className="text-gray-300 text-sm mb-4">Speak with our team right now</p>
+            <a 
+              href="tel:+254708901911"
+              className="inline-block bg-cinematic-gold text-cinematic-black px-6 py-2 rounded-lg font-bold text-sm hover:bg-cinematic-gold/80 transition-colors"
+            >
+              Call +254 708 901 911
+            </a>
+          </div>
+        </div>
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
