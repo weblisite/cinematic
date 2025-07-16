@@ -9,7 +9,6 @@ const Contact = () => {
     phone: '',
     company: '',
     service: '',
-    budget: '',
     message: ''
   })
 
@@ -45,7 +44,6 @@ const Contact = () => {
           phone: '',
           company: '',
           service: '',
-          budget: '',
           message: ''
         })
       } else {
