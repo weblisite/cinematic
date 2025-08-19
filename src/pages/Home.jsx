@@ -98,19 +98,19 @@ const Home = () => {
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cinematic-gold">150+</div>
-                  <div className="text-gray-400">Projects Completed</div>
+                  <div className="text-3xl font-bold text-cinematic-gold">15</div>
+                  <div className="text-gray-400">Films in Pipeline</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cinematic-gold">50+</div>
-                  <div className="text-gray-400">Happy Clients</div>
+                  <div className="text-3xl font-bold text-cinematic-gold">10+</div>
+                  <div className="text-gray-400">Brands Integrated</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cinematic-gold">5+</div>
                   <div className="text-gray-400">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cinematic-gold">10M+</div>
+                  <div className="text-3xl font-bold text-cinematic-gold">10X</div>
                   <div className="text-gray-400">Views Generated</div>
                 </div>
               </div>
