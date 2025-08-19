@@ -49,19 +49,19 @@ const About = () => {
         {/* Company Stats */}
         <section className="grid md:grid-cols-4 gap-8 text-center mb-20">
           <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-            <div className="text-3xl font-bold text-cinematic-gold mb-2">150+</div>
-            <div className="text-gray-300">Projects Completed</div>
+            <div className="text-3xl font-bold text-cinematic-gold mb-2">15</div>
+            <div className="text-gray-300">Films in Pipeline</div>
           </div>
           <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-            <div className="text-3xl font-bold text-cinematic-gold mb-2">50+</div>
-            <div className="text-gray-300">Happy Clients</div>
+            <div className="text-3xl font-bold text-cinematic-gold mb-2">10+</div>
+            <div className="text-gray-300">Brands Integrated</div>
           </div>
           <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
             <div className="text-3xl font-bold text-cinematic-gold mb-2">5+</div>
             <div className="text-gray-300">Years Experience</div>
           </div>
           <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-            <div className="text-3xl font-bold text-cinematic-gold mb-2">10M+</div>
+            <div className="text-3xl font-bold text-cinematic-gold mb-2">10X</div>
             <div className="text-gray-300">Views Generated</div>
           </div>
         </section>
