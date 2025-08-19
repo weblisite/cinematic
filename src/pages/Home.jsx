@@ -102,15 +102,15 @@ const Home = () => {
                   <div className="text-gray-400">Films in Pipeline</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cinematic-gold">10+</div>
+                  <div className="text-3xl font-bold text-cinematic-gold">12+</div>
                   <div className="text-gray-400">Brands Integrated</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cinematic-gold">5+</div>
+                  <div className="text-3xl font-bold text-cinematic-gold">7+</div>
                   <div className="text-gray-400">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cinematic-gold">10X</div>
+                  <div className="text-3xl font-bold text-cinematic-gold">100X</div>
                   <div className="text-gray-400">Views Generated</div>
                 </div>
               </div>

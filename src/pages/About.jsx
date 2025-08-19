@@ -53,15 +53,15 @@ const About = () => {
             <div className="text-gray-300">Films in Pipeline</div>
           </div>
           <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-            <div className="text-3xl font-bold text-cinematic-gold mb-2">10+</div>
+            <div className="text-3xl font-bold text-cinematic-gold mb-2">12+</div>
             <div className="text-gray-300">Brands Integrated</div>
           </div>
           <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-            <div className="text-3xl font-bold text-cinematic-gold mb-2">5+</div>
+            <div className="text-3xl font-bold text-cinematic-gold mb-2">7+</div>
             <div className="text-gray-300">Years Experience</div>
           </div>
           <div className="bg-cinematic-gray p-6 rounded-lg glow-gold">
-            <div className="text-3xl font-bold text-cinematic-gold mb-2">10X</div>
+            <div className="text-3xl font-bold text-cinematic-gold mb-2">100X</div>
             <div className="text-gray-300">Views Generated</div>
           </div>
         </section>
