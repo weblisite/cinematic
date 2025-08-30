@@ -176,13 +176,13 @@ const Contact = () => {
                   className="w-full px-4 py-3 bg-cinematic-black border border-gray-600 rounded-lg focus:border-cinematic-gold focus:outline-none text-white"
                 >
                   <option value="">Select a service</option>
-                  <option value="sponsored-content">Sponsored Content Integration (KSh 50K per episode)</option>
-                  <option value="cinematic-ads">Cinematic Video Ads (KSh 100K+)</option>
-                  <option value="day-in-life">Day in the Life Videos (KSh 150K+)</option>
-                  <option value="mini-movies">Business Mini-Movies (KSh 200K+)</option>
-                  <option value="business-reality">Business Reality Shows (KSh 300K+)</option>
-                  <option value="branded-competitions">Branded Competitions (KSh 400K+)</option>
-                  <option value="branded-reality">Branded Reality Shows (KSh 500K+)</option>
+                                  <option value="sponsored-content">Sponsored Content Integration (KSh 250K per episode)</option>
+                <option value="cinematic-ads">Cinematic Video Ads (KSh 500K+)</option>
+                <option value="day-in-life">Day in the Life Videos (KSh 750K+)</option>
+                <option value="mini-movies">Business Mini-Movies (KSh 1M+)</option>
+                <option value="business-reality">Business Reality Shows (KSh 1.5M+)</option>
+                <option value="branded-competitions">Branded Competitions (KSh 2M+)</option>
+                <option value="branded-reality">Branded Reality Shows (KSh 2.5M+)</option>
                   <option value="other">Other / Custom Quote</option>
                 </select>
               </div>

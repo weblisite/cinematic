@@ -15,7 +15,7 @@ const DayInLifeVideos = () => {
             Showcase your team's expertise and dedication through cinematic day-in-the-life documentaries that humanize your business and build authentic connections with your audience.
           </p>
           <div className="text-center bg-gradient-to-r from-cinematic-gold/20 to-cinematic-black p-6 rounded-lg glow-gold inline-block">
-            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 150,000</p>
+            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 750,000</p>
             <p className="text-gray-300">Professional documentary-style production</p>
           </div>
         </div>
@@ -257,7 +257,7 @@ const DayInLifeVideos = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="bg-cinematic-gray p-8 rounded-lg border border-cinematic-gold/30">
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Team Focus</h3>
-              <p className="text-3xl font-bold text-white mb-2">KSh 150,000</p>
+              <p className="text-3xl font-bold text-white mb-2">KSh 750,000</p>
               <p className="text-gray-400 mb-6">3 employees featured</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
@@ -288,7 +288,7 @@ const DayInLifeVideos = () => {
                 <span className="bg-cinematic-gold text-cinematic-black px-4 py-1 rounded-full text-sm font-bold">RECOMMENDED</span>
               </div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Team Series</h3>
-              <p className="text-3xl font-bold text-white mb-2">KSh 350,000</p>
+              <p className="text-3xl font-bold text-white mb-2">KSh 1,750,000</p>
               <p className="text-gray-400 mb-6">10 employees featured</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
@@ -320,7 +320,7 @@ const DayInLifeVideos = () => {
             
             <div className="bg-cinematic-gray p-8 rounded-lg border border-cinematic-gold/30">
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Department Focus</h3>
-              <p className="text-3xl font-bold text-white mb-2">KSh 500,000</p>
+              <p className="text-3xl font-bold text-white mb-2">KSh 2,500,000</p>
               <p className="text-gray-400 mb-6">Entire department showcase</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">

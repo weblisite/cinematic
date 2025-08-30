@@ -15,7 +15,7 @@ const SponsoredContentIntegration = () => {
             Get your brand seamlessly featured in our high-quality cinematic content across our main video channels with natural, non-intrusive integration that resonates with audiences.
           </p>
           <div className="text-center bg-gradient-to-r from-cinematic-gold/20 to-cinematic-black p-6 rounded-lg glow-gold inline-block">
-            <p className="text-3xl font-bold text-cinematic-gold mb-2">KSh 50,000 per episode</p>
+            <p className="text-3xl font-bold text-cinematic-gold mb-2">KSh 250,000 per episode</p>
             <p className="text-gray-300">Premium brand integration in existing content</p>
           </div>
         </div>
@@ -252,7 +252,7 @@ const SponsoredContentIntegration = () => {
                 <span className="bg-cinematic-gold text-cinematic-black px-4 py-2 rounded-full text-sm font-bold">FEATURED INTEGRATION</span>
               </div>
               <h3 className="text-3xl font-bold text-cinematic-gold mb-4 text-center">Channel Sponsorship</h3>
-              <p className="text-4xl font-bold text-white mb-2 text-center">KSh 50,000</p>
+              <p className="text-4xl font-bold text-white mb-2 text-center">KSh 250,000</p>
               <p className="text-gray-400 mb-6 text-center">Per episode integration</p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-gray-300">

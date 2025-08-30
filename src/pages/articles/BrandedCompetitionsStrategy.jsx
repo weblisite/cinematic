@@ -247,7 +247,7 @@ const BrandedCompetitionsStrategy = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-cinematic-gray p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Multi-Brand Competition</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 400,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 2,000,000+</div>
                 <div className="text-gray-400 text-sm mb-4">6-8 episodes, shared brand focus</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Partnership with 2-3 complementary brands</li>
@@ -259,7 +259,7 @@ const BrandedCompetitionsStrategy = () => {
               
               <div className="bg-cinematic-gray p-6 rounded-lg border-2 border-cinematic-gold">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Solo Brand Showcase</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 1,200,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 6,000,000+</div>
                 <div className="text-gray-400 text-sm mb-4">10-15 episodes, exclusive brand focus</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Exclusive brand integration across all challenges</li>
@@ -269,9 +269,9 @@ const BrandedCompetitionsStrategy = () => {
                 </ul>
               </div>
               
-              <div className="bg-cinematic-gray p-6 rounded-lg">
-                <h4 className="text-xl font-bold text-cinematic-gold mb-4">Exclusive Two-Season Series</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 2,000,000+</div>
+                          <div className="bg-cinematic-gray p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-cinematic-gold mb-4">Exclusive Two-Season Series</h4>
+              <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 10,000,000+</div>
                 <div className="text-gray-400 text-sm mb-4">20+ episodes across two seasons</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Long-term brand narrative development</li>

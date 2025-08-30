@@ -15,7 +15,7 @@ const BusinessRealityShows = () => {
             Create premium reality shows inspired by global hits, showcasing your company culture, leadership, and operations through compelling cinematic storytelling that builds your brand.
           </p>
           <div className="text-center bg-gradient-to-r from-cinematic-gold/20 to-cinematic-black p-6 rounded-lg glow-gold inline-block">
-            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 500,000</p>
+            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 2,500,000</p>
             <p className="text-gray-300">Premium reality TV production</p>
           </div>
         </div>
@@ -288,7 +288,7 @@ const BusinessRealityShows = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="bg-cinematic-black p-8 rounded-lg border border-cinematic-gold/30">
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Mini Series</h3>
-              <p className="text-3xl font-bold text-white mb-2">KSh 500,000</p>
+              <p className="text-3xl font-bold text-white mb-2">KSh 2,500,000</p>
               <p className="text-gray-400 mb-6">5-episode series</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
@@ -319,7 +319,7 @@ const BusinessRealityShows = () => {
                 <span className="bg-cinematic-gold text-cinematic-black px-4 py-1 rounded-full text-sm font-bold">RECOMMENDED</span>
               </div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Full Season Series</h3>
-              <p className="text-3xl font-bold text-white mb-2">KSh 1,200,000</p>
+              <p className="text-3xl font-bold text-white mb-2">KSh 6,000,000</p>
               <p className="text-gray-400 mb-6">10-episode series</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
@@ -351,7 +351,7 @@ const BusinessRealityShows = () => {
             
             <div className="bg-cinematic-black p-8 rounded-lg border border-cinematic-gold/30">
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Two Season Series</h3>
-              <p className="text-3xl font-bold text-white mb-2">KSh 2,500,000</p>
+              <p className="text-3xl font-bold text-white mb-2">KSh 12,500,000</p>
               <p className="text-gray-400 mb-6">20 episodes (2 seasons)</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">

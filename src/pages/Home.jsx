@@ -211,7 +211,7 @@ const Home = () => {
             <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
               <h3 className="text-xl font-bold text-cinematic-gold mb-3">Cinematic Video Ads</h3>
               <p className="text-gray-300 mb-4">Drive sales with cinematic ads that captivate and convert your audience.</p>
-              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 100,000</p>
+              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 500,000</p>
               <button 
                 onClick={() => navigate('/services/cinematic-video-ads')}
                 className="w-full btn-primary focus-visible"
@@ -222,7 +222,7 @@ const Home = () => {
             <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
               <h3 className="text-xl font-bold text-cinematic-gold mb-3">Day in the Life Videos</h3>
               <p className="text-gray-300 mb-4">Cinematic documentaries featuring your business personnel and employees.</p>
-              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 150,000</p>
+              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 750,000</p>
               <button 
                 onClick={() => navigate('/services/day-in-life-videos')}
                 className="w-full btn-primary focus-visible"
@@ -233,7 +233,7 @@ const Home = () => {
             <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
               <h3 className="text-xl font-bold text-cinematic-gold mb-3">Business Mini-Movies</h3>
               <p className="text-gray-300 mb-4">Cinematic documentaries about your business story and values.</p>
-              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 200,000</p>
+              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 1,000,000</p>
               <button 
                 onClick={() => navigate('/services/business-mini-movies')}
                 className="w-full btn-primary focus-visible"
@@ -244,7 +244,7 @@ const Home = () => {
             <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
               <h3 className="text-xl font-bold text-cinematic-gold mb-3">Branded Reality Shows</h3>
               <p className="text-gray-300 mb-4">High-production reality shows with your business brand infused in the show.</p>
-              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 300,000</p>
+              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 1,500,000</p>
               <button 
                 onClick={() => navigate('/services/branded-reality-shows')}
                 className="w-full btn-primary focus-visible"
@@ -255,7 +255,7 @@ const Home = () => {
             <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
               <h3 className="text-xl font-bold text-cinematic-gold mb-3">Branded Competitions</h3>
               <p className="text-gray-300 mb-4">Competition series with your product infused in the competition.</p>
-              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 400,000</p>
+              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 2,000,000</p>
               <button 
                 onClick={() => navigate('/services/branded-competitions')}
                 className="w-full btn-primary focus-visible"
@@ -266,7 +266,7 @@ const Home = () => {
             <div className="bg-cinematic-gray p-6 rounded-lg service-card lazy-load">
               <h3 className="text-xl font-bold text-cinematic-gold mb-3">Business Reality Shows</h3>
               <p className="text-gray-300 mb-4">Reality shows and drama series showcasing your company culture.</p>
-              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 500,000</p>
+              <p className="text-cinematic-gold font-bold mb-4">Starting at KSh 2,500,000</p>
               <button 
                 onClick={() => navigate('/services/business-reality-shows')}
                 className="w-full btn-primary focus-visible"
