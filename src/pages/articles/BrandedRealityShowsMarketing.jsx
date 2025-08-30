@@ -251,7 +251,7 @@ const BrandedRealityShowsMarketing = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-cinematic-gray p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Mini-Series</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 1,500,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 300,000+</div>
                 <div className="text-gray-400 text-sm mb-4">3-5 episodes, 15-20 min each</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Simple format adaptation</li>
@@ -263,7 +263,7 @@ const BrandedRealityShowsMarketing = () => {
               
               <div className="bg-cinematic-gray p-6 rounded-lg border-2 border-cinematic-gold">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Full Series</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 4,000,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 800,000+</div>
                 <div className="text-gray-400 text-sm mb-4">8-12 episodes, 25-40 min each</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Complex format development</li>
@@ -275,7 +275,7 @@ const BrandedRealityShowsMarketing = () => {
               
               <div className="bg-cinematic-gray p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Premium Series</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 7,500,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 1,500,000+</div>
                 <div className="text-gray-400 text-sm mb-4">Two seasons, 20+ episodes</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Original format creation</li>

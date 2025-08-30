@@ -236,7 +236,7 @@ const BusinessMiniMoviesGuide = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-cinematic-gray p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Essential Story</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 1,000,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 200,000+</div>
                 <div className="text-gray-400 text-sm mb-4">20-30 minute documentary</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Single location focus</li>
@@ -248,7 +248,7 @@ const BusinessMiniMoviesGuide = () => {
               
               <div className="bg-cinematic-gray p-6 rounded-lg border-2 border-cinematic-gold">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Complete Journey</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 2,250,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 450,000+</div>
                 <div className="text-gray-400 text-sm mb-4">40-60 minute feature</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Multiple location filming</li>
@@ -260,7 +260,7 @@ const BusinessMiniMoviesGuide = () => {
               
               <div className="bg-cinematic-gray p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Premium Documentary</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 3,750,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 750,000+</div>
                 <div className="text-gray-400 text-sm mb-4">70-90 minute film</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• International filming capability</li>

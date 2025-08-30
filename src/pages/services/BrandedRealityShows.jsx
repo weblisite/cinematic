@@ -15,7 +15,7 @@ const BrandedRealityShows = () => {
             Create high-production reality shows with your business brand seamlessly integrated into compelling entertainment that captivates audiences while building brand awareness.
           </p>
           <div className="text-center bg-gradient-to-r from-cinematic-gold/20 to-cinematic-black p-6 rounded-lg glow-gold inline-block">
-            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 1,500,000</p>
+            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 900,000</p>
             <p className="text-gray-300">Professional reality TV production</p>
           </div>
         </div>
@@ -257,7 +257,7 @@ const BrandedRealityShows = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="bg-cinematic-gray p-8 rounded-lg border border-cinematic-gold/30">
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Mini-Series</h3>
-              <p className="text-3xl font-bold text-white mb-2">KSh 1,500,000</p>
+              <p className="text-3xl font-bold text-white mb-2">KSh 900,000</p>
               <p className="text-gray-400 mb-6">Short series format</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
@@ -288,7 +288,7 @@ const BrandedRealityShows = () => {
                 <span className="bg-cinematic-gold text-cinematic-black px-4 py-1 rounded-full text-sm font-bold">RECOMMENDED</span>
               </div>
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Full Series</h3>
-              <p className="text-3xl font-bold text-white mb-2">KSh 4,000,000</p>
+              <p className="text-3xl font-bold text-white mb-2">KSh 2,400,000</p>
               <p className="text-gray-400 mb-6">Complete season</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
@@ -320,7 +320,7 @@ const BrandedRealityShows = () => {
             
             <div className="bg-cinematic-gray p-8 rounded-lg border border-cinematic-gold/30">
               <h3 className="text-2xl font-bold text-cinematic-gold mb-4">Two Season Series</h3>
-              <p className="text-3xl font-bold text-white mb-2">KSh 7,500,000</p>
+              <p className="text-3xl font-bold text-white mb-2">KSh 4,500,000</p>
               <p className="text-gray-400 mb-6">Multi-season production</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">

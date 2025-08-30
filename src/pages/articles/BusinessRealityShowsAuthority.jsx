@@ -262,7 +262,7 @@ const BusinessRealityShowsAuthority = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-cinematic-gray p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Focused Series</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 2,500,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 500,000+</div>
                 <div className="text-gray-400 text-sm mb-4">5-8 episodes, 20-30 min each</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Single business focus area</li>
@@ -274,7 +274,7 @@ const BusinessRealityShowsAuthority = () => {
               
               <div className="bg-cinematic-gray p-6 rounded-lg border-2 border-cinematic-gold">
                 <h4 className="text-xl font-bold text-cinematic-gold mb-4">Comprehensive Series</h4>
-                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 6,000,000+</div>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 1,200,000+</div>
                 <div className="text-gray-400 text-sm mb-4">10-15 episodes, 30-45 min each</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Multi-departmental coverage</li>
@@ -284,9 +284,9 @@ const BusinessRealityShowsAuthority = () => {
                 </ul>
               </div>
               
-                          <div className="bg-cinematic-gray p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-cinematic-gold mb-4">Premium Authority Series</h4>
-              <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 12,500,000+</div>
+              <div className="bg-cinematic-gray p-6 rounded-lg">
+                <h4 className="text-xl font-bold text-cinematic-gold mb-4">Premium Authority Series</h4>
+                <div className="text-2xl font-bold text-cinematic-gold mb-2">KSh 2,500,000+</div>
                 <div className="text-gray-400 text-sm mb-4">20+ episodes across 2 seasons</div>
                 <ul className="text-gray-300 text-sm space-y-1">
                   <li>• Complete business transformation documentation</li>
