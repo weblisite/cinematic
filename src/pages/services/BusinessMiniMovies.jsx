@@ -15,7 +15,7 @@ const BusinessMiniMovies = () => {
             Tell your brand's story with compelling cinematic mini-documentaries that showcase your journey, values, and vision in an engaging narrative format.
           </p>
           <div className="text-center bg-gradient-to-r from-cinematic-gold/20 to-cinematic-black p-6 rounded-lg glow-gold inline-block">
-            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 200,000</p>
+            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 600,000</p>
             <p className="text-gray-300">Cinematic brand storytelling</p>
           </div>
         </div>

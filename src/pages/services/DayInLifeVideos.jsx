@@ -15,7 +15,7 @@ const DayInLifeVideos = () => {
             Showcase your team's expertise and dedication through cinematic day-in-the-life documentaries that humanize your business and build authentic connections with your audience.
           </p>
           <div className="text-center bg-gradient-to-r from-cinematic-gold/20 to-cinematic-black p-6 rounded-lg glow-gold inline-block">
-            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 150,000</p>
+            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 450,000</p>
             <p className="text-gray-300">Professional documentary-style production</p>
           </div>
         </div>

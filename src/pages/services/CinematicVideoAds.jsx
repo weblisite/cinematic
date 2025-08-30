@@ -15,7 +15,7 @@ const CinematicVideoAds = () => {
             Drive sales with captivating cinematic advertisements that transform viewers into loyal customers through professional storytelling and visual excellence.
           </p>
           <div className="text-center bg-gradient-to-r from-cinematic-gold/20 to-cinematic-black p-6 rounded-lg glow-gold inline-block">
-            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 100,000</p>
+            <p className="text-3xl font-bold text-cinematic-gold mb-2">Starting at KSh 300,000</p>
             <p className="text-gray-300">Professional cinema-grade video advertising</p>
           </div>
         </div>
